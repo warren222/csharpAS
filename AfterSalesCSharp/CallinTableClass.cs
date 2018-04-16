@@ -7,6 +7,7 @@ using System.Data.SqlClient;
 using System.Windows.Forms;
 using MetroFramework;
 using System.Data;
+using System.Drawing;
 
 namespace AfterSalesCSharp
 {
@@ -48,41 +49,10 @@ namespace AfterSalesCSharp
                 sql.sqlcon.Open();
                 DataGridViewButtonColumn btnCol = new DataGridViewButtonColumn();
                 frm1.callinGRID.Columns.Clear();
-                string ROWNUM = frm1.rownumber.Text;
-                if (ROWNUM == "100")
-                    ROWNUM = " TOP 100 ";
-                else if (ROWNUM == "200")
-                    ROWNUM = " TOP 200 ";
-                else if (ROWNUM == "400")
-                    ROWNUM = " TOP 400 ";
-                else if (ROWNUM == "800")
-                    ROWNUM = " TOP 800 ";
-                else if (ROWNUM == "1,600")
-                    ROWNUM = " TOP 1600 ";
-                else if (ROWNUM == "2,400")
-                    ROWNUM = " TOP 2400 ";
-                else if (ROWNUM == "3,200")
-                    ROWNUM = " TOP 3200 ";
-                else if (ROWNUM == "6,400")
-                    ROWNUM = " TOP 6400 ";
-                else if (ROWNUM == "10,000")
-                    ROWNUM = " TOP 10000 ";
-                else if (ROWNUM == "20,000")
-                    ROWNUM = " TOP 20000 ";
-                else if (ROWNUM == "100,000")
-                    ROWNUM = " TOP 100000 ";
-                else if (ROWNUM == "500,000")
-                    ROWNUM = " TOP 500000 ";
-                else if (ROWNUM == "1,000,000")
-                    ROWNUM = " TOP 1000000 ";
-                else if (ROWNUM == "1,500,000")
-                    ROWNUM = " TOP 1500000 ";
-                else if (ROWNUM == "MAX")
-                    ROWNUM = " ";
-
+       
                 DataSet ds = new DataSet();
                 ds.Clear();
-                string query = "Select " + ROWNUM + " " + callintbcolumns + " from callintb order by autonum desc";
+                string query = "Select " + frm1.rowcounter(frm1.rownumber1.Text) + " " + callintbcolumns + " from callintb order by autonum desc";
                 sqlcmd = new SqlCommand(query, sql.sqlcon);
                 da.SelectCommand = sqlcmd;
                 da.Fill(ds, "callintb");
@@ -104,6 +74,7 @@ namespace AfterSalesCSharp
                 sql.sqlcon.Close();
             }
         }
+
         public void findcallin(string query)
         {
             try
@@ -172,6 +143,18 @@ namespace AfterSalesCSharp
         }
         public void manageCALLINGRIDcolumns()
         {
+            for(int i = 0; i <= frm1.callinGRID.RowCount-1; i++)
+            {
+                string a = frm1.callinGRID.Rows[i].Cells["STATUS"].Value.ToString();
+                if (a == "Done")
+                {
+                    frm1.callinGRID.Rows[i].Cells["STATUS"].Style.BackColor = System.Drawing.Color.Blue;
+                    frm1.callinGRID.Rows[i].Cells["STATUS"].Style.Font = new Font("Century Gothic", 9, FontStyle.Bold);
+                    frm1.callinGRID.Rows[i].Cells["STATUS"].Style.ForeColor = Color.White;
+                }
+            }
+
+
             frm1.callinGRID.Columns["AUTONUM"].Visible = false;
             frm1.callinGRID.Columns["AUTONUM"].Frozen = true;
             frm1.callinGRID.Columns["CIn"].Frozen = true;

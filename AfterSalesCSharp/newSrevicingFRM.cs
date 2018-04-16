@@ -127,9 +127,9 @@ namespace AfterSalesCSharp
             if ((servicingGRID.RowCount >= 0) && (e.RowIndex >= 0))
             {
 
-                if (e.ColumnIndex == 6)
+                if (e.ColumnIndex == 7)
                 {
-                    MetroMessageBox.Show(this, "" + row.Cells[5].Value.ToString() + "", "Assignee's Report", MessageBoxButtons.OK, MessageBoxIcon.Question);
+                    MetroMessageBox.Show(this, "" + row.Cells[6].Value.ToString() + "", "Assignee's Report", MessageBoxButtons.OK, MessageBoxIcon.Question);
                 }
                 else if (e.ColumnIndex == 9)
                 {
@@ -138,14 +138,14 @@ namespace AfterSalesCSharp
                 savetotemp();
 
                 tempid = row.Cells[0].Value.ToString();
-                servicingdate.Text = row.Cells[3].Value.ToString();
-                assignedpersonnelTXT.Text = row.Cells[4].Value.ToString();
-                assigneesreportTXT.Text = row.Cells[5].Value.ToString();
-                doneTXT.Text = row.Cells[7].Value.ToString();
+                servicingdate.Text = row.Cells[4].Value.ToString();
+                assignedpersonnelTXT.Text = row.Cells[5].Value.ToString();
+                assigneesreportTXT.Text = row.Cells[6].Value.ToString();
+                doneTXT.Text = row.Cells[1].Value.ToString();
                 remarksTXT.Text = row.Cells[8].Value.ToString();
-                forschedTXT.Text = row.Cells[9].Value.ToString();
-                forcostingTXT.Text = row.Cells[10].Value.ToString();
-                forquotationTXT.Text = row.Cells[11].Value.ToString();
+                forschedTXT.Text = row.Cells[10].Value.ToString();
+                forcostingTXT.Text = row.Cells[11].Value.ToString();
+                forquotationTXT.Text = row.Cells[12].Value.ToString();
 
                 cancelBTN.Visible = true;
                 deleteBTN.Visible = true;

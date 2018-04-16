@@ -12,6 +12,7 @@ using Transitions;
 using System.Data.SqlClient;
 using MetroFramework;
 
+
 namespace AfterSalesCSharp
 {
     public partial class Form1 : MetroForm
@@ -47,10 +48,11 @@ namespace AfterSalesCSharp
 
         bool firstload = true;
         bool firstloadservicing = true;
-        string rownum;
+      
         private void Form1_Load(object sender, EventArgs e)
         {
-            rownumber.SelectedIndex = 0;
+            rownumber1.SelectedIndex = 0;
+            servicingrownumber.SelectedIndex = 0;
         }
 
         private void calldategen_MouseDown(object sender, MouseEventArgs e)
@@ -466,41 +468,8 @@ namespace AfterSalesCSharp
             else
                 g = "'%" + g + "%'";
 
-
-
-            if (rownum == "100")
-                rownum = " TOP 100 ";
-            else if (rownum == "200")
-                rownum = " TOP 200 ";
-            else if (rownum == "400")
-                rownum = " TOP 400 ";
-            else if (rownum == "800")
-                rownum = " TOP 800 ";
-            else if (rownum == "1,600")
-                rownum = " TOP 1600 ";
-            else if (rownum == "2,400")
-                rownum = " TOP 2400 ";
-            else if (rownum == "3,200")
-                rownum = " TOP 3200 ";
-            else if (rownum == "6,400")
-                rownum = " TOP 6400 ";
-            else if (rownum == "10,000")
-                rownum = " TOP 10000 ";
-            else if (rownum == "20,000")
-                rownum = " TOP 20000 ";
-            else if (rownum == "100,000")
-                rownum = " TOP 100000 ";
-            else if (rownum == "500,000")
-                rownum = " TOP 500000 ";
-            else if (rownum == "1,000,000")
-                rownum = " TOP 1000000 ";
-            else if (rownum == "1,500,000")
-                rownum = " TOP 1500000 ";
-            else if (rownum == "MAX")
-                rownum = " ";
-
             CallinTableClass y = new CallinTableClass(this);
-        string query = "select " + rownum + " " + y.callintbcolumns + " from callintb where " + cola + " like " + a + " and "+
+        string query = "select " + rowcounter(rownumber1.Text) + " " + y.callintbcolumns + " from callintb where " + cola + " like " + a + " and "+
                                                             "" + colb + " like " + b + " and "+
                                                             "" + colc + " like " + c + " and "+
                                                             "" + cold + " like " + d + " and "+
@@ -549,6 +518,80 @@ namespace AfterSalesCSharp
             regularserchTXT.Text = regularserchTXT.Text.Replace("'", "`").Trim();
             regularserchTXT.Text = regularserchTXT.Text.Replace("\"", "``").Trim();
 
+            CallinTableClass b = new CallinTableClass(this);
+            string query = "select " + rowcounter(rownumber1.Text) + " " + b.callintbcolumns + " from callintb where project like '%" + regularserchTXT.Text + "%'";
+            b.findcallin(query);
+        }
+
+        private void servicingrefreshBTN_Click(object sender, EventArgs e)
+        {
+            ServicingClass c = new ServicingClass(this,NSF);
+            c.loadservicingtb("");
+        }
+
+        private void MetroTabControl1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (MetroTabControl1.SelectedIndex == 1)
+            {
+                if (firstload == false)
+                {
+                }
+                else
+                {
+                    CallinTableClass b = new CallinTableClass(this);
+                    b.loadcallintb();
+                    firstload = false;
+                }
+            }
+            else if (MetroTabControl1.SelectedIndex == 2)
+            {
+                if (firstloadservicing == false)
+                {
+                }
+                else
+                {
+                    ServicingClass c = new ServicingClass(this,NSF);
+                    c.loadservicingtb("");
+                    firstloadservicing = false;
+                }
+            }
+        }
+
+        private void servicingGridView_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if ((servicingGridView.RowCount >= 0) && (e.RowIndex >= 0))
+            {
+                DataGridViewRow row = servicingGridView.Rows[e.RowIndex];
+                tempcin = row.Cells[3].Value.ToString();
+                if (e.ColumnIndex == 9)
+                {
+                    MetroMessageBox.Show(this, "" + row.Cells[8].Value.ToString() + "", "Assignee's Report", MessageBoxButtons.OK, MessageBoxIcon.Question);
+                }
+                else if (e.ColumnIndex == 4)
+                {
+                    NSF = new newSrevicingFRM();
+                    NSF.ShowDialog();
+                }
+            }
+        }
+
+        private void servicingGridView_RowPostPaint(object sender, DataGridViewRowPostPaintEventArgs e)
+        {
+            sql s = new AfterSalesCSharp.sql(this);
+            s.autorow(sender,e); 
+        }
+
+        private void servicingprojectSearch_ButtonClick(object sender, EventArgs e)
+        {
+            servicingprojectSearch.Text = servicingprojectSearch.Text.Replace("'", "`").Trim();
+            servicingprojectSearch.Text = servicingprojectSearch.Text.Replace("\"", "``").Trim();
+
+            ServicingClass c = new ServicingClass(this,NSF);
+            string con = " where b.project like '%" + servicingprojectSearch.Text + "%' ";
+            c.loadservicingtb(con);
+        }
+        public string rowcounter(string rownum)
+        {
             if (rownum == "100")
                 rownum = " TOP 100 ";
             else if (rownum == "200")
@@ -579,68 +622,7 @@ namespace AfterSalesCSharp
                 rownum = " TOP 1500000 ";
             else if (rownum == "MAX")
                 rownum = " ";
-
-            CallinTableClass b = new CallinTableClass(this);
-            string query = "select " + rownum + " " + b.callintbcolumns + " from callintb where project like '%" + regularserchTXT.Text + "%'";
-            b.findcallin(query);
-        }
-
-        private void servicingrefreshBTN_Click(object sender, EventArgs e)
-        {
-            ServicingClass c = new ServicingClass(this,NSF);
-            c.loadservicingtb();
-        }
-
-        private void MetroTabControl1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            if (MetroTabControl1.SelectedIndex == 1)
-            {
-                if (firstload == false)
-                {
-                }
-                else
-                {
-                    CallinTableClass b = new CallinTableClass(this);
-                    b.loadcallintb();
-                    firstload = false;
-                }
-            }
-            else if (MetroTabControl1.SelectedIndex == 2)
-            {
-                if (firstloadservicing == false)
-                {
-                }
-                else
-                {
-                    ServicingClass c = new ServicingClass(this,NSF);
-                    c.loadservicingtb();
-                    firstloadservicing = false;
-                }
-            }
-        }
-
-        private void servicingGridView_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            if ((servicingGridView.RowCount >= 0) && (e.RowIndex >= 0))
-            {
-                DataGridViewRow row = servicingGridView.Rows[e.RowIndex];
-                tempcin = row.Cells[1].Value.ToString();
-                if (e.ColumnIndex == 7)
-                {
-                    MetroMessageBox.Show(this, "" + row.Cells[6].Value.ToString() + "", "Assignee's Report", MessageBoxButtons.OK, MessageBoxIcon.Question);
-                }
-                else if (e.ColumnIndex == 2)
-                {
-                    NSF = new newSrevicingFRM();
-                    NSF.ShowDialog();
-                }
-            }
-        }
-
-        private void servicingGridView_RowPostPaint(object sender, DataGridViewRowPostPaintEventArgs e)
-        {
-            sql s = new AfterSalesCSharp.sql(this);
-            s.autorow(sender,e); 
+            return rownum;
         }
     }
 }

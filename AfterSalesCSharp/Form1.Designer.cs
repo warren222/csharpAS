@@ -29,15 +29,15 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
             this.MetroTabControl1 = new MetroFramework.Controls.MetroTabControl();
             this.MetroTabPage1 = new MetroFramework.Controls.MetroTabPage();
-            this.newcallinPNL = new System.Windows.Forms.Panel();
             this.deleteBTN = new MetroFramework.Controls.MetroTextBox.MetroTextButton();
+            this.newcallinPNL = new System.Windows.Forms.Panel();
             this.datevisitedgen = new MetroFramework.Controls.MetroDateTime();
             this.assignedpersonnelTXT = new MetroFramework.Controls.MetroTextBox();
             this.datevisitedTXT = new MetroFramework.Controls.MetroTextBox();
@@ -48,7 +48,6 @@
             this.searchresultLBL = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.searchResultGridview = new ComponentFactory.Krypton.Toolkit.KryptonDataGridView();
             this.PictureBox1 = new System.Windows.Forms.PictureBox();
-            this.cancelBTN = new MetroFramework.Controls.MetroTextBox.MetroTextButton();
             this.calldateTXT = new MetroFramework.Controls.MetroTextBox();
             this.calldategen = new MetroFramework.Controls.MetroDateTime();
             this.KryptonLabel2 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
@@ -63,15 +62,16 @@
             this.recipientTXT = new MetroFramework.Controls.MetroTextBox();
             this.addressTXT = new MetroFramework.Controls.MetroTextBox();
             this.projectTXT = new MetroFramework.Controls.MetroTextBox();
-            this.updateBTN = new MetroFramework.Controls.MetroTextBox.MetroTextButton();
             this.addBTN = new MetroFramework.Controls.MetroTextBox.MetroTextButton();
+            this.updateBTN = new MetroFramework.Controls.MetroTextBox.MetroTextButton();
+            this.cancelBTN = new MetroFramework.Controls.MetroTextBox.MetroTextButton();
             this.MetroTabPage2 = new MetroFramework.Controls.MetroTabPage();
             this.callintabletabPNL = new System.Windows.Forms.Panel();
             this.KryptonLabel9 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.regularserchTXT = new MetroFramework.Controls.MetroTextBox();
             this.refreshBTN = new MetroFramework.Controls.MetroTextBox.MetroTextButton();
             this.dropsearchpanelBTN = new MetroFramework.Controls.MetroTextBox.MetroTextButton();
-            this.rownumber = new System.Windows.Forms.ComboBox();
+            this.rownumber1 = new System.Windows.Forms.ComboBox();
             this.callinGRID = new ComponentFactory.Krypton.Toolkit.KryptonDataGridView();
             this.Panel2 = new System.Windows.Forms.Panel();
             this.clearsearchBTN = new MetroFramework.Controls.MetroTextBox.MetroTextButton();
@@ -90,8 +90,11 @@
             this.projectSearch = new System.Windows.Forms.ComboBox();
             this.MetroTabPage3 = new MetroFramework.Controls.MetroTabPage();
             this.Panel3 = new System.Windows.Forms.Panel();
-            this.servicingrefreshBTN = new MetroFramework.Controls.MetroTextBox.MetroTextButton();
+            this.kryptonLabel4 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
+            this.servicingprojectSearch = new MetroFramework.Controls.MetroTextBox();
+            this.servicingrownumber = new System.Windows.Forms.ComboBox();
             this.servicingGridView = new ComponentFactory.Krypton.Toolkit.KryptonDataGridView();
+            this.servicingrefreshBTN = new MetroFramework.Controls.MetroTextBox.MetroTextButton();
             this.MetroTabPage4 = new MetroFramework.Controls.MetroTabPage();
             this.KryptonDataGridView1 = new ComponentFactory.Krypton.Toolkit.KryptonDataGridView();
             this.quREFRESH = new MetroFramework.Controls.MetroTextBox.MetroTextButton();
@@ -131,7 +134,7 @@
             this.MetroTabControl1.Controls.Add(this.MetroTabPage4);
             this.MetroTabControl1.Location = new System.Drawing.Point(15, 60);
             this.MetroTabControl1.Name = "MetroTabControl1";
-            this.MetroTabControl1.SelectedIndex = 0;
+            this.MetroTabControl1.SelectedIndex = 2;
             this.MetroTabControl1.Size = new System.Drawing.Size(1024, 638);
             this.MetroTabControl1.SizeMode = System.Windows.Forms.TabSizeMode.FillToRight;
             this.MetroTabControl1.Style = MetroFramework.MetroColorStyle.Red;
@@ -150,15 +153,32 @@
             this.MetroTabPage1.HorizontalScrollbarBarColor = true;
             this.MetroTabPage1.HorizontalScrollbarHighlightOnWheel = false;
             this.MetroTabPage1.HorizontalScrollbarSize = 10;
-            this.MetroTabPage1.Location = new System.Drawing.Point(4, 47);
+            this.MetroTabPage1.Location = new System.Drawing.Point(4, 41);
             this.MetroTabPage1.Name = "MetroTabPage1";
-            this.MetroTabPage1.Size = new System.Drawing.Size(1016, 587);
+            this.MetroTabPage1.Size = new System.Drawing.Size(1016, 593);
             this.MetroTabPage1.TabIndex = 0;
             this.MetroTabPage1.Text = "New Call In";
             this.MetroTabPage1.UseCustomBackColor = true;
             this.MetroTabPage1.VerticalScrollbarBarColor = true;
             this.MetroTabPage1.VerticalScrollbarHighlightOnWheel = false;
             this.MetroTabPage1.VerticalScrollbarSize = 10;
+            // 
+            // deleteBTN
+            // 
+            this.deleteBTN.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.deleteBTN.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.deleteBTN.Image = ((System.Drawing.Image)(resources.GetObject("deleteBTN.Image")));
+            this.deleteBTN.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.deleteBTN.Location = new System.Drawing.Point(619, 549);
+            this.deleteBTN.Name = "deleteBTN";
+            this.deleteBTN.Size = new System.Drawing.Size(98, 35);
+            this.deleteBTN.Style = MetroFramework.MetroColorStyle.Red;
+            this.deleteBTN.TabIndex = 479;
+            this.deleteBTN.Text = "Delete";
+            this.deleteBTN.UseSelectable = true;
+            this.deleteBTN.UseVisualStyleBackColor = true;
+            this.deleteBTN.Visible = false;
+            this.deleteBTN.Click += new System.EventHandler(this.deleteBTN_Click);
             // 
             // newcallinPNL
             // 
@@ -195,29 +215,12 @@
             this.newcallinPNL.Size = new System.Drawing.Size(1007, 540);
             this.newcallinPNL.TabIndex = 2;
             // 
-            // deleteBTN
-            // 
-            this.deleteBTN.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.deleteBTN.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.deleteBTN.Image = ((System.Drawing.Image)(resources.GetObject("deleteBTN.Image")));
-            this.deleteBTN.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.deleteBTN.Location = new System.Drawing.Point(619, 549);
-            this.deleteBTN.Name = "deleteBTN";
-            this.deleteBTN.Size = new System.Drawing.Size(98, 35);
-            this.deleteBTN.Style = MetroFramework.MetroColorStyle.Red;
-            this.deleteBTN.TabIndex = 479;
-            this.deleteBTN.Text = "Delete";
-            this.deleteBTN.UseSelectable = true;
-            this.deleteBTN.UseVisualStyleBackColor = true;
-            this.deleteBTN.Visible = false;
-            this.deleteBTN.Click += new System.EventHandler(this.deleteBTN_Click);
-            // 
             // datevisitedgen
             // 
             this.datevisitedgen.CustomFormat = "yyyy-MMM-dd";
             this.datevisitedgen.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.datevisitedgen.Location = new System.Drawing.Point(510, 478);
-            this.datevisitedgen.MinimumSize = new System.Drawing.Size(0, 29);
+            this.datevisitedgen.MinimumSize = new System.Drawing.Size(4, 29);
             this.datevisitedgen.Name = "datevisitedgen";
             this.datevisitedgen.Size = new System.Drawing.Size(126, 29);
             this.datevisitedgen.Style = MetroFramework.MetroColorStyle.Red;
@@ -333,7 +336,7 @@
             this.CLEARSEARCHRESULTbtn.Image = null;
             this.CLEARSEARCHRESULTbtn.Location = new System.Drawing.Point(471, 415);
             this.CLEARSEARCHRESULTbtn.Name = "CLEARSEARCHRESULTbtn";
-            this.CLEARSEARCHRESULTbtn.Size = new System.Drawing.Size(489, 23);
+            this.CLEARSEARCHRESULTbtn.Size = new System.Drawing.Size(455, 23);
             this.CLEARSEARCHRESULTbtn.Style = MetroFramework.MetroColorStyle.Silver;
             this.CLEARSEARCHRESULTbtn.TabIndex = 473;
             this.CLEARSEARCHRESULTbtn.Text = "clear search result";
@@ -345,7 +348,7 @@
             // searchresultLBL
             // 
             this.searchresultLBL.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.searchresultLBL.Location = new System.Drawing.Point(641, 115);
+            this.searchresultLBL.Location = new System.Drawing.Point(607, 115);
             this.searchresultLBL.Name = "searchresultLBL";
             this.searchresultLBL.Size = new System.Drawing.Size(132, 24);
             this.searchresultLBL.StateCommon.ShortText.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
@@ -360,9 +363,9 @@
             this.searchResultGridview.AllowUserToOrderColumns = true;
             this.searchResultGridview.AllowUserToResizeColumns = false;
             this.searchResultGridview.AllowUserToResizeRows = false;
-            dataGridViewCellStyle11.BackColor = System.Drawing.Color.WhiteSmoke;
-            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.Black;
-            this.searchResultGridview.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle17.BackColor = System.Drawing.Color.WhiteSmoke;
+            dataGridViewCellStyle17.ForeColor = System.Drawing.Color.Black;
+            this.searchResultGridview.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle17;
             this.searchResultGridview.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.searchResultGridview.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCells;
@@ -377,7 +380,7 @@
             this.searchResultGridview.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.Color.Black;
             this.searchResultGridview.RowTemplate.Height = 27;
             this.searchResultGridview.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.searchResultGridview.Size = new System.Drawing.Size(489, 260);
+            this.searchResultGridview.Size = new System.Drawing.Size(455, 260);
             this.searchResultGridview.StateCommon.Background.Color1 = System.Drawing.Color.White;
             this.searchResultGridview.StateCommon.BackStyle = ComponentFactory.Krypton.Toolkit.PaletteBackStyle.GridBackgroundList;
             this.searchResultGridview.StateCommon.DataCell.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
@@ -405,23 +408,6 @@
             this.PictureBox1.Size = new System.Drawing.Size(966, 95);
             this.PictureBox1.TabIndex = 470;
             this.PictureBox1.TabStop = false;
-            // 
-            // cancelBTN
-            // 
-            this.cancelBTN.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.cancelBTN.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.cancelBTN.Image = ((System.Drawing.Image)(resources.GetObject("cancelBTN.Image")));
-            this.cancelBTN.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.cancelBTN.Location = new System.Drawing.Point(516, 549);
-            this.cancelBTN.Name = "cancelBTN";
-            this.cancelBTN.Size = new System.Drawing.Size(98, 35);
-            this.cancelBTN.Style = MetroFramework.MetroColorStyle.Yellow;
-            this.cancelBTN.TabIndex = 467;
-            this.cancelBTN.Text = "Cancel";
-            this.cancelBTN.UseSelectable = true;
-            this.cancelBTN.UseVisualStyleBackColor = true;
-            this.cancelBTN.Visible = false;
-            this.cancelBTN.Click += new System.EventHandler(this.cancelBTN_Click);
             // 
             // calldateTXT
             // 
@@ -463,7 +449,7 @@
             this.calldategen.CustomFormat = "yyyy-MMM-dd";
             this.calldategen.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.calldategen.Location = new System.Drawing.Point(37, 154);
-            this.calldategen.MinimumSize = new System.Drawing.Size(0, 29);
+            this.calldategen.MinimumSize = new System.Drawing.Size(4, 29);
             this.calldategen.Name = "calldategen";
             this.calldategen.Size = new System.Drawing.Size(126, 29);
             this.calldategen.Style = MetroFramework.MetroColorStyle.Red;
@@ -852,6 +838,22 @@
             this.projectTXT.WaterMarkFont = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.projectTXT.ButtonClick += new MetroFramework.Controls.MetroTextBox.ButClick(this.projectTXT_ButtonClick);
             // 
+            // addBTN
+            // 
+            this.addBTN.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.addBTN.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.addBTN.Image = ((System.Drawing.Image)(resources.GetObject("addBTN.Image")));
+            this.addBTN.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.addBTN.Location = new System.Drawing.Point(826, 549);
+            this.addBTN.Name = "addBTN";
+            this.addBTN.Size = new System.Drawing.Size(98, 35);
+            this.addBTN.Style = MetroFramework.MetroColorStyle.Red;
+            this.addBTN.TabIndex = 13;
+            this.addBTN.Text = "Add";
+            this.addBTN.UseSelectable = true;
+            this.addBTN.UseVisualStyleBackColor = true;
+            this.addBTN.Click += new System.EventHandler(this.addBTN_Click);
+            // 
             // updateBTN
             // 
             this.updateBTN.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
@@ -869,21 +871,22 @@
             this.updateBTN.Visible = false;
             this.updateBTN.Click += new System.EventHandler(this.updateBTN_Click);
             // 
-            // addBTN
+            // cancelBTN
             // 
-            this.addBTN.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.addBTN.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.addBTN.Image = ((System.Drawing.Image)(resources.GetObject("addBTN.Image")));
-            this.addBTN.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.addBTN.Location = new System.Drawing.Point(826, 549);
-            this.addBTN.Name = "addBTN";
-            this.addBTN.Size = new System.Drawing.Size(98, 35);
-            this.addBTN.Style = MetroFramework.MetroColorStyle.Red;
-            this.addBTN.TabIndex = 13;
-            this.addBTN.Text = "Add";
-            this.addBTN.UseSelectable = true;
-            this.addBTN.UseVisualStyleBackColor = true;
-            this.addBTN.Click += new System.EventHandler(this.addBTN_Click);
+            this.cancelBTN.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.cancelBTN.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cancelBTN.Image = ((System.Drawing.Image)(resources.GetObject("cancelBTN.Image")));
+            this.cancelBTN.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.cancelBTN.Location = new System.Drawing.Point(516, 549);
+            this.cancelBTN.Name = "cancelBTN";
+            this.cancelBTN.Size = new System.Drawing.Size(98, 35);
+            this.cancelBTN.Style = MetroFramework.MetroColorStyle.Yellow;
+            this.cancelBTN.TabIndex = 467;
+            this.cancelBTN.Text = "Cancel";
+            this.cancelBTN.UseSelectable = true;
+            this.cancelBTN.UseVisualStyleBackColor = true;
+            this.cancelBTN.Visible = false;
+            this.cancelBTN.Click += new System.EventHandler(this.cancelBTN_Click);
             // 
             // MetroTabPage2
             // 
@@ -891,9 +894,9 @@
             this.MetroTabPage2.HorizontalScrollbarBarColor = true;
             this.MetroTabPage2.HorizontalScrollbarHighlightOnWheel = false;
             this.MetroTabPage2.HorizontalScrollbarSize = 10;
-            this.MetroTabPage2.Location = new System.Drawing.Point(4, 47);
+            this.MetroTabPage2.Location = new System.Drawing.Point(4, 41);
             this.MetroTabPage2.Name = "MetroTabPage2";
-            this.MetroTabPage2.Size = new System.Drawing.Size(1016, 587);
+            this.MetroTabPage2.Size = new System.Drawing.Size(1016, 593);
             this.MetroTabPage2.Style = MetroFramework.MetroColorStyle.Red;
             this.MetroTabPage2.TabIndex = 1;
             this.MetroTabPage2.Text = "Call In Table";
@@ -911,7 +914,7 @@
             this.callintabletabPNL.Controls.Add(this.regularserchTXT);
             this.callintabletabPNL.Controls.Add(this.refreshBTN);
             this.callintabletabPNL.Controls.Add(this.dropsearchpanelBTN);
-            this.callintabletabPNL.Controls.Add(this.rownumber);
+            this.callintabletabPNL.Controls.Add(this.rownumber1);
             this.callintabletabPNL.Controls.Add(this.callinGRID);
             this.callintabletabPNL.Controls.Add(this.Panel2);
             this.callintabletabPNL.Location = new System.Drawing.Point(1, 1);
@@ -922,7 +925,7 @@
             // KryptonLabel9
             // 
             this.KryptonLabel9.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.KryptonLabel9.Location = new System.Drawing.Point(376, 8);
+            this.KryptonLabel9.Location = new System.Drawing.Point(114, 18);
             this.KryptonLabel9.Name = "KryptonLabel9";
             this.KryptonLabel9.Size = new System.Drawing.Size(64, 20);
             this.KryptonLabel9.StateCommon.ShortText.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
@@ -948,7 +951,7 @@
             this.regularserchTXT.FontSize = MetroFramework.MetroTextBoxSize.Medium;
             this.regularserchTXT.ForeColor = System.Drawing.SystemColors.ControlText;
             this.regularserchTXT.Lines = new string[0];
-            this.regularserchTXT.Location = new System.Drawing.Point(597, 8);
+            this.regularserchTXT.Location = new System.Drawing.Point(335, 18);
             this.regularserchTXT.MaxLength = 32767;
             this.regularserchTXT.Name = "regularserchTXT";
             this.regularserchTXT.PasswordChar = '\0';
@@ -974,7 +977,7 @@
             this.refreshBTN.Cursor = System.Windows.Forms.Cursors.Hand;
             this.refreshBTN.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.refreshBTN.Image = null;
-            this.refreshBTN.Location = new System.Drawing.Point(749, 44);
+            this.refreshBTN.Location = new System.Drawing.Point(749, 31);
             this.refreshBTN.Name = "refreshBTN";
             this.refreshBTN.Size = new System.Drawing.Size(124, 19);
             this.refreshBTN.Style = MetroFramework.MetroColorStyle.Silver;
@@ -990,7 +993,7 @@
             this.dropsearchpanelBTN.Cursor = System.Windows.Forms.Cursors.Hand;
             this.dropsearchpanelBTN.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dropsearchpanelBTN.Image = null;
-            this.dropsearchpanelBTN.Location = new System.Drawing.Point(881, 44);
+            this.dropsearchpanelBTN.Location = new System.Drawing.Point(881, 31);
             this.dropsearchpanelBTN.Name = "dropsearchpanelBTN";
             this.dropsearchpanelBTN.Size = new System.Drawing.Size(124, 19);
             this.dropsearchpanelBTN.Style = MetroFramework.MetroColorStyle.Silver;
@@ -1000,13 +1003,13 @@
             this.dropsearchpanelBTN.UseVisualStyleBackColor = true;
             this.dropsearchpanelBTN.Click += new System.EventHandler(this.dropsearchpanelBTN_Click);
             // 
-            // rownumber
+            // rownumber1
             // 
-            this.rownumber.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.rownumber.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.rownumber.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rownumber.FormattingEnabled = true;
-            this.rownumber.Items.AddRange(new object[] {
+            this.rownumber1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.rownumber1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.rownumber1.Font = new System.Drawing.Font("Century Gothic", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rownumber1.FormattingEnabled = true;
+            this.rownumber1.Items.AddRange(new object[] {
             "100",
             "200",
             "400",
@@ -1022,10 +1025,10 @@
             "1,000,000",
             "1,500,000",
             "MAX"});
-            this.rownumber.Location = new System.Drawing.Point(446, 8);
-            this.rownumber.Name = "rownumber";
-            this.rownumber.Size = new System.Drawing.Size(145, 25);
-            this.rownumber.TabIndex = 474;
+            this.rownumber1.Location = new System.Drawing.Point(184, 18);
+            this.rownumber1.Name = "rownumber1";
+            this.rownumber1.Size = new System.Drawing.Size(145, 29);
+            this.rownumber1.TabIndex = 474;
             // 
             // callinGRID
             // 
@@ -1034,16 +1037,16 @@
             this.callinGRID.AllowUserToOrderColumns = true;
             this.callinGRID.AllowUserToResizeColumns = false;
             this.callinGRID.AllowUserToResizeRows = false;
-            dataGridViewCellStyle12.BackColor = System.Drawing.Color.WhiteSmoke;
-            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.Black;
-            this.callinGRID.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle12;
+            dataGridViewCellStyle18.BackColor = System.Drawing.Color.WhiteSmoke;
+            dataGridViewCellStyle18.ForeColor = System.Drawing.Color.Black;
+            this.callinGRID.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle18;
             this.callinGRID.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.callinGRID.ColumnHeadersHeight = 30;
             this.callinGRID.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.callinGRID.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.callinGRID.Location = new System.Drawing.Point(6, 174);
+            this.callinGRID.Location = new System.Drawing.Point(6, 64);
             this.callinGRID.Name = "callinGRID";
             this.callinGRID.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Office2010Silver;
             this.callinGRID.ReadOnly = true;
@@ -1051,7 +1054,7 @@
             this.callinGRID.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.Color.Black;
             this.callinGRID.RowTemplate.Height = 27;
             this.callinGRID.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.callinGRID.Size = new System.Drawing.Size(999, 412);
+            this.callinGRID.Size = new System.Drawing.Size(999, 522);
             this.callinGRID.StateCommon.Background.Color1 = System.Drawing.Color.White;
             this.callinGRID.StateCommon.BackStyle = ComponentFactory.Krypton.Toolkit.PaletteBackStyle.GridBackgroundList;
             this.callinGRID.StateCommon.DataCell.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
@@ -1258,9 +1261,9 @@
             this.MetroTabPage3.HorizontalScrollbarBarColor = true;
             this.MetroTabPage3.HorizontalScrollbarHighlightOnWheel = false;
             this.MetroTabPage3.HorizontalScrollbarSize = 10;
-            this.MetroTabPage3.Location = new System.Drawing.Point(4, 47);
+            this.MetroTabPage3.Location = new System.Drawing.Point(4, 41);
             this.MetroTabPage3.Name = "MetroTabPage3";
-            this.MetroTabPage3.Size = new System.Drawing.Size(1016, 587);
+            this.MetroTabPage3.Size = new System.Drawing.Size(1016, 593);
             this.MetroTabPage3.TabIndex = 2;
             this.MetroTabPage3.Text = "Servicing";
             this.MetroTabPage3.VerticalScrollbarBarColor = true;
@@ -1272,7 +1275,10 @@
             this.Panel3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.Panel3.BackColor = System.Drawing.Color.White;
+            this.Panel3.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.Panel3.Controls.Add(this.kryptonLabel4);
+            this.Panel3.Controls.Add(this.servicingprojectSearch);
+            this.Panel3.Controls.Add(this.servicingrownumber);
             this.Panel3.Controls.Add(this.servicingGridView);
             this.Panel3.Controls.Add(this.servicingrefreshBTN);
             this.Panel3.Location = new System.Drawing.Point(3, 3);
@@ -1280,20 +1286,81 @@
             this.Panel3.Size = new System.Drawing.Size(1017, 587);
             this.Panel3.TabIndex = 3;
             // 
-            // servicingrefreshBTN
+            // kryptonLabel4
             // 
-            this.servicingrefreshBTN.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.servicingrefreshBTN.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.servicingrefreshBTN.Image = null;
-            this.servicingrefreshBTN.Location = new System.Drawing.Point(875, 24);
-            this.servicingrefreshBTN.Name = "servicingrefreshBTN";
-            this.servicingrefreshBTN.Size = new System.Drawing.Size(124, 19);
-            this.servicingrefreshBTN.Style = MetroFramework.MetroColorStyle.Silver;
-            this.servicingrefreshBTN.TabIndex = 471;
-            this.servicingrefreshBTN.Text = "Refresh Table";
-            this.servicingrefreshBTN.UseSelectable = true;
-            this.servicingrefreshBTN.UseVisualStyleBackColor = true;
-            this.servicingrefreshBTN.Click += new System.EventHandler(this.servicingrefreshBTN_Click);
+            this.kryptonLabel4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.kryptonLabel4.Location = new System.Drawing.Point(239, 18);
+            this.kryptonLabel4.Name = "kryptonLabel4";
+            this.kryptonLabel4.Size = new System.Drawing.Size(64, 20);
+            this.kryptonLabel4.StateCommon.ShortText.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.kryptonLabel4.StateCommon.ShortText.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kryptonLabel4.TabIndex = 478;
+            this.kryptonLabel4.Values.Text = "Top Rows";
+            // 
+            // servicingprojectSearch
+            // 
+            this.servicingprojectSearch.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            // 
+            // 
+            // 
+            this.servicingprojectSearch.CustomButton.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image7")));
+            this.servicingprojectSearch.CustomButton.Location = new System.Drawing.Point(378, 2);
+            this.servicingprojectSearch.CustomButton.Name = "";
+            this.servicingprojectSearch.CustomButton.Size = new System.Drawing.Size(27, 27);
+            this.servicingprojectSearch.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.servicingprojectSearch.CustomButton.TabIndex = 1;
+            this.servicingprojectSearch.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.servicingprojectSearch.CustomButton.UseSelectable = true;
+            this.servicingprojectSearch.DisplayIcon = true;
+            this.servicingprojectSearch.FontSize = MetroFramework.MetroTextBoxSize.Medium;
+            this.servicingprojectSearch.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.servicingprojectSearch.Lines = new string[0];
+            this.servicingprojectSearch.Location = new System.Drawing.Point(460, 18);
+            this.servicingprojectSearch.MaxLength = 32767;
+            this.servicingprojectSearch.Name = "servicingprojectSearch";
+            this.servicingprojectSearch.PasswordChar = '\0';
+            this.servicingprojectSearch.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.servicingprojectSearch.SelectedText = "";
+            this.servicingprojectSearch.SelectionLength = 0;
+            this.servicingprojectSearch.SelectionStart = 0;
+            this.servicingprojectSearch.ShowButton = true;
+            this.servicingprojectSearch.ShowClearButton = true;
+            this.servicingprojectSearch.Size = new System.Drawing.Size(408, 32);
+            this.servicingprojectSearch.Style = MetroFramework.MetroColorStyle.Red;
+            this.servicingprojectSearch.TabIndex = 476;
+            this.servicingprojectSearch.UseCustomForeColor = true;
+            this.servicingprojectSearch.UseSelectable = true;
+            this.servicingprojectSearch.WaterMark = "Search Project Name";
+            this.servicingprojectSearch.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.servicingprojectSearch.WaterMarkFont = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.servicingprojectSearch.ButtonClick += new MetroFramework.Controls.MetroTextBox.ButClick(this.servicingprojectSearch_ButtonClick);
+            // 
+            // servicingrownumber
+            // 
+            this.servicingrownumber.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.servicingrownumber.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.servicingrownumber.Font = new System.Drawing.Font("Century Gothic", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.servicingrownumber.FormattingEnabled = true;
+            this.servicingrownumber.Items.AddRange(new object[] {
+            "100",
+            "200",
+            "400",
+            "800",
+            "1,600",
+            "2,400",
+            "3,200",
+            "6,400",
+            "10,000",
+            "20,000",
+            "100,000",
+            "500,000",
+            "1,000,000",
+            "1,500,000",
+            "MAX"});
+            this.servicingrownumber.Location = new System.Drawing.Point(309, 18);
+            this.servicingrownumber.Name = "servicingrownumber";
+            this.servicingrownumber.Size = new System.Drawing.Size(145, 29);
+            this.servicingrownumber.TabIndex = 477;
             // 
             // servicingGridView
             // 
@@ -1302,16 +1369,16 @@
             this.servicingGridView.AllowUserToOrderColumns = true;
             this.servicingGridView.AllowUserToResizeColumns = false;
             this.servicingGridView.AllowUserToResizeRows = false;
-            dataGridViewCellStyle13.BackColor = System.Drawing.Color.WhiteSmoke;
-            dataGridViewCellStyle13.ForeColor = System.Drawing.Color.Black;
-            this.servicingGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle13;
+            dataGridViewCellStyle16.BackColor = System.Drawing.Color.WhiteSmoke;
+            dataGridViewCellStyle16.ForeColor = System.Drawing.Color.Black;
+            this.servicingGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle16;
             this.servicingGridView.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.servicingGridView.ColumnHeadersHeight = 30;
             this.servicingGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.servicingGridView.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.servicingGridView.Location = new System.Drawing.Point(3, 42);
+            this.servicingGridView.Location = new System.Drawing.Point(3, 56);
             this.servicingGridView.Name = "servicingGridView";
             this.servicingGridView.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Office2010Silver;
             this.servicingGridView.ReadOnly = true;
@@ -1319,8 +1386,8 @@
             this.servicingGridView.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.Color.Black;
             this.servicingGridView.RowTemplate.Height = 27;
             this.servicingGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.servicingGridView.Size = new System.Drawing.Size(1011, 539);
-            this.servicingGridView.StateCommon.Background.Color1 = System.Drawing.Color.White;
+            this.servicingGridView.Size = new System.Drawing.Size(1011, 525);
+            this.servicingGridView.StateCommon.Background.Color1 = System.Drawing.Color.WhiteSmoke;
             this.servicingGridView.StateCommon.BackStyle = ComponentFactory.Krypton.Toolkit.PaletteBackStyle.GridBackgroundList;
             this.servicingGridView.StateCommon.DataCell.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.servicingGridView.StateCommon.DataCell.Content.Font = new System.Drawing.Font("Segoe UI", 8F);
@@ -1335,6 +1402,21 @@
             this.servicingGridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.servicingGridView_CellClick);
             this.servicingGridView.RowPostPaint += new System.Windows.Forms.DataGridViewRowPostPaintEventHandler(this.servicingGridView_RowPostPaint);
             // 
+            // servicingrefreshBTN
+            // 
+            this.servicingrefreshBTN.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.servicingrefreshBTN.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.servicingrefreshBTN.Image = null;
+            this.servicingrefreshBTN.Location = new System.Drawing.Point(874, 31);
+            this.servicingrefreshBTN.Name = "servicingrefreshBTN";
+            this.servicingrefreshBTN.Size = new System.Drawing.Size(124, 19);
+            this.servicingrefreshBTN.Style = MetroFramework.MetroColorStyle.Silver;
+            this.servicingrefreshBTN.TabIndex = 471;
+            this.servicingrefreshBTN.Text = "Refresh Table";
+            this.servicingrefreshBTN.UseSelectable = true;
+            this.servicingrefreshBTN.UseVisualStyleBackColor = true;
+            this.servicingrefreshBTN.Click += new System.EventHandler(this.servicingrefreshBTN_Click);
+            // 
             // MetroTabPage4
             // 
             this.MetroTabPage4.Controls.Add(this.KryptonDataGridView1);
@@ -1344,9 +1426,9 @@
             this.MetroTabPage4.HorizontalScrollbarBarColor = true;
             this.MetroTabPage4.HorizontalScrollbarHighlightOnWheel = false;
             this.MetroTabPage4.HorizontalScrollbarSize = 10;
-            this.MetroTabPage4.Location = new System.Drawing.Point(4, 47);
+            this.MetroTabPage4.Location = new System.Drawing.Point(4, 41);
             this.MetroTabPage4.Name = "MetroTabPage4";
-            this.MetroTabPage4.Size = new System.Drawing.Size(1016, 587);
+            this.MetroTabPage4.Size = new System.Drawing.Size(1016, 593);
             this.MetroTabPage4.TabIndex = 3;
             this.MetroTabPage4.Text = "Job Order";
             this.MetroTabPage4.VerticalScrollbarBarColor = true;
@@ -1360,9 +1442,9 @@
             this.KryptonDataGridView1.AllowUserToOrderColumns = true;
             this.KryptonDataGridView1.AllowUserToResizeColumns = false;
             this.KryptonDataGridView1.AllowUserToResizeRows = false;
-            dataGridViewCellStyle14.BackColor = System.Drawing.Color.WhiteSmoke;
-            dataGridViewCellStyle14.ForeColor = System.Drawing.Color.Black;
-            this.KryptonDataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle14;
+            dataGridViewCellStyle19.BackColor = System.Drawing.Color.WhiteSmoke;
+            dataGridViewCellStyle19.ForeColor = System.Drawing.Color.Black;
+            this.KryptonDataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle19;
             this.KryptonDataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
@@ -1415,7 +1497,7 @@
             // 
             // 
             // 
-            this.MetroTextBox1.CustomButton.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image7")));
+            this.MetroTextBox1.CustomButton.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image8")));
             this.MetroTextBox1.CustomButton.Location = new System.Drawing.Point(213, 2);
             this.MetroTextBox1.CustomButton.Name = "";
             this.MetroTextBox1.CustomButton.Size = new System.Drawing.Size(27, 27);
@@ -1488,9 +1570,9 @@
             this.CallLogGrid.AllowUserToOrderColumns = true;
             this.CallLogGrid.AllowUserToResizeColumns = false;
             this.CallLogGrid.AllowUserToResizeRows = false;
-            dataGridViewCellStyle15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            dataGridViewCellStyle15.ForeColor = System.Drawing.Color.Black;
-            this.CallLogGrid.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle15;
+            dataGridViewCellStyle20.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            dataGridViewCellStyle20.ForeColor = System.Drawing.Color.Black;
+            this.CallLogGrid.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle20;
             this.CallLogGrid.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.CallLogGrid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
@@ -1559,6 +1641,7 @@
             this.Panel2.PerformLayout();
             this.MetroTabPage3.ResumeLayout(false);
             this.Panel3.ResumeLayout(false);
+            this.Panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.servicingGridView)).EndInit();
             this.MetroTabPage4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.KryptonDataGridView1)).EndInit();
@@ -1608,7 +1691,7 @@
         internal MetroFramework.Controls.MetroTextBox regularserchTXT;
         internal MetroFramework.Controls.MetroTextBox.MetroTextButton refreshBTN;
         internal MetroFramework.Controls.MetroTextBox.MetroTextButton dropsearchpanelBTN;
-        internal System.Windows.Forms.ComboBox rownumber;
+        internal System.Windows.Forms.ComboBox rownumber1;
         internal ComponentFactory.Krypton.Toolkit.KryptonDataGridView callinGRID;
         internal System.Windows.Forms.Panel Panel2;
         internal MetroFramework.Controls.MetroTextBox.MetroTextButton clearsearchBTN;
@@ -1637,6 +1720,9 @@
         internal System.Windows.Forms.Panel Panel5;
         internal ComponentFactory.Krypton.Toolkit.KryptonLabel KryptonLabel3;
         internal ComponentFactory.Krypton.Toolkit.KryptonDataGridView CallLogGrid;
+        internal ComponentFactory.Krypton.Toolkit.KryptonLabel kryptonLabel4;
+        internal MetroFramework.Controls.MetroTextBox servicingprojectSearch;
+        internal System.Windows.Forms.ComboBox servicingrownumber;
     }
 }
 

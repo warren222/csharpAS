@@ -7,6 +7,7 @@ using System.Data.SqlClient;
 using System.Windows.Forms;
 using MetroFramework;
 using System.Data;
+using System.Drawing;
 
 namespace AfterSalesCSharp
 {
@@ -26,27 +27,30 @@ namespace AfterSalesCSharp
         BindingSource servicingbs = new BindingSource();
         BindingSource newservicingbs = new BindingSource();
 
-        string columns = "[ID]"+
-                          ",[CIN]"+
-                          ",[SERVICING]"+
-                          ",[SDATE] as DATE"+
-                          ",[ASSIGNEDPERSONNEL] AS[ASSIGNED PERSONNEL]"+
-                          ",[REPORT]"+
-                          ",[DONE]"+
-                          ",[NEEDEDMATERIALSREMARKS] AS[NEEDED MATERIALS / REMARKS]"+
-                          ",[FORSCHED] AS[FOR RESCHED]"+
-                          ",[FORCOSTING] AS[FOR COSTING]"+
-                          ",[FORQUOTATIONORADDITIONAL] AS[FOR QUOTATION / ADDITIONAL]";
-        public void loadservicingtb()
+        public string columns = "a.[ID]"+
+                          ",a.[DONE]" +
+                          ",b.[PROJECT]" +
+                          ",a.[CIN]" +
+                          ",a.[SERVICING]"+
+                          ",a.[SDATE] as DATE"+
+                          ",a.[ASSIGNEDPERSONNEL] AS[ASSIGNED PERSONNEL]"+
+                          ",a.[REPORT]"+
+                          ",a.[NEEDEDMATERIALSREMARKS] AS[NEEDED MATERIALS / REMARKS]"+
+                          ",a.[FORSCHED] AS[FOR RESCHED]"+
+                          ",a.[FORCOSTING] AS[FOR COSTING]"+
+                          ",a.[FORQUOTATIONORADDITIONAL] AS[FOR QUOTATION / ADDITIONAL]";
+        public void loadservicingtb(string condition)
         {
             try
             {
-                sql.sqlcon.Open();
+                sql.sqlcon.Open();            
+
                 DataGridViewButtonColumn btnCol = new DataGridViewButtonColumn();
                 frm1.servicingGridView.Columns.Clear();
                 DataSet ds = new DataSet();
                 ds.Clear();
-                string query = "select " + columns + " from servicingtb";
+              
+                string query = "select " + frm1.rowcounter(frm1.servicingrownumber.Text) + columns + " from servicingtb as a  inner join callintb as b on a.cin = b.cin "+condition+ " order by a.cin desc,a.servicing asc";
                 sqlcmd = new SqlCommand(query, sql.sqlcon);
                 da.SelectCommand = sqlcmd;
                 da.Fill(ds, "servicingtb");
@@ -78,17 +82,28 @@ namespace AfterSalesCSharp
 
             vs.Name = "vs";
             vs.HeaderText = "";
-            vs.Text = "group";
+            vs.Text = "servicing";
             vs.UseColumnTextForButtonValue = true;
 
-            frm1.servicingGridView.Columns.Insert(2, vs);
-            frm1.servicingGridView.Columns.Insert(7, btn);
+            frm1.servicingGridView.Columns.Insert(4, vs);
+            frm1.servicingGridView.Columns.Insert(9, btn);
 
         }
         public void managecolumn()
         {
+            for (int i = 0; i <= frm1.servicingGridView.RowCount - 1; i++)
+            {
+                string a = frm1.servicingGridView.Rows[i].Cells["DONE"].Value.ToString();
+                if (a != "")
+                {
+                    frm1.servicingGridView.Rows[i].Cells["DONE"].Style.ForeColor = Color.White;
+                    frm1.servicingGridView.Rows[i].Cells["DONE"].Style.BackColor = Color.Blue;
+                    frm1.servicingGridView.Rows[i].Cells["DONE"].Style.Font = new Font("Century Gothic", 9, FontStyle.Bold);
+                }
+            }
 
-            frm1.servicingGridView.Columns["ID"].AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells;
+            frm1.servicingGridView.Columns["PROJECT"].AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells;
+            frm1.servicingGridView.Columns["ID"].Visible = false;
             frm1.servicingGridView.Columns["CIN"].AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells;
             frm1.servicingGridView.Columns["SERVICING"].AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells;
             frm1.servicingGridView.Columns["DATE"].AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells;
@@ -112,7 +127,7 @@ namespace AfterSalesCSharp
  
                 DataSet ds = new DataSet();
                 ds.Clear();
-                string query = "select " + columns + " from servicingtb where cin = '" + cin + "'";
+                string query = "select " + columns.Replace(",b.[PROJECT]","") + " from servicingtb as a where a.cin = '" + cin + "'";
                 sqlcmd = new SqlCommand(query, sql.sqlcon);
                 da.SelectCommand = sqlcmd;
                 da.Fill(ds, "servicingtb");
@@ -155,7 +170,7 @@ namespace AfterSalesCSharp
             btn.HeaderText = "";
             btn.Text = "...";
             btn.UseColumnTextForButtonValue = true;
-            nsf.servicingGRID.Columns.Insert(6, btn);
+            nsf.servicingGRID.Columns.Insert(7, btn);
 
             mbtn.Name = "mbtn";
             mbtn.HeaderText = "";
@@ -165,6 +180,18 @@ namespace AfterSalesCSharp
         }
         public void manageservicingGridViewcolumns()
         {
+
+            for (int i = 0; i <= nsf.servicingGRID.RowCount - 1; i++)
+            {
+                string a = nsf.servicingGRID.Rows[i].Cells["DONE"].Value.ToString();
+                if (a != "")
+                {
+                    nsf.servicingGRID.Rows[i].Cells["DONE"].Style.ForeColor = Color.White;
+                    nsf.servicingGRID.Rows[i].Cells["DONE"].Style.BackColor = Color.Blue;
+                    nsf.servicingGRID.Rows[i].Cells["DONE"].Style.Font = new Font("Century Gothic", 9, FontStyle.Bold);
+                }
+            }
+
             nsf.servicingGRID.Columns["ID"].Visible = false;
             nsf.servicingGRID.Columns["CIN"].Visible = false;
             nsf.servicingGRID.Columns["SERVICING"].AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells;
@@ -261,6 +288,21 @@ namespace AfterSalesCSharp
                                   "FORQUOTATIONORADDITIONAL = '" + forquotation + "' where id = '" + id + "'";
                 sqlcmd = new SqlCommand(query, sql.sqlcon);
                 sqlcmd.ExecuteNonQuery();
+
+                if (status != "")
+                {
+                    string str = "update servicingtb set done = '--' where done ='' and cin = '" + cin + "'"+
+                                 "update callintb set status = 'Done' where cin = '" + cin + "'";
+                    sqlcmd = new SqlCommand(str, sql.sqlcon);
+                    sqlcmd.ExecuteNonQuery();
+                }
+                else
+                {
+                    string str ="update callintb set status = '' where cin = '" + cin + "'";
+                    sqlcmd = new SqlCommand(str, sql.sqlcon);
+                    sqlcmd.ExecuteNonQuery();
+                }
+
                 sql.sqlcon.Close();
                 loadnewservicing(cin);
                 MetroMessageBox.Show(newSrevicingFRM.ActiveForm, "Data Updated Successfully", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
