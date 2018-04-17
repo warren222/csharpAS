@@ -165,6 +165,9 @@ namespace AfterSalesCSharp
         {
             DataGridViewButtonColumn btn = new DataGridViewButtonColumn();
             DataGridViewButtonColumn mbtn = new DataGridViewButtonColumn();
+            DataGridViewButtonColumn sbtn = new DataGridViewButtonColumn();
+            DataGridViewButtonColumn cbtn = new DataGridViewButtonColumn();
+            DataGridViewButtonColumn adlbtn = new DataGridViewButtonColumn();
 
             btn.Name = "VIEW";
             btn.HeaderText = "";
@@ -177,6 +180,24 @@ namespace AfterSalesCSharp
             mbtn.Text = "...";
             mbtn.UseColumnTextForButtonValue = true;
             nsf.servicingGRID.Columns.Insert(9, mbtn);
+
+            sbtn.Name = "sbtn";
+            sbtn.HeaderText = "";
+            sbtn.Text = "...";
+            sbtn.UseColumnTextForButtonValue = true;
+            nsf.servicingGRID.Columns.Insert(11, sbtn);
+
+            cbtn.Name = "cbtn";
+            cbtn.HeaderText = "";
+            cbtn.Text = "...";
+            cbtn.UseColumnTextForButtonValue = true;
+            nsf.servicingGRID.Columns.Insert(13, cbtn);
+
+            adlbtn.Name = "adlbtn";
+            adlbtn.HeaderText = "";
+            adlbtn.Text = "...";
+            adlbtn.UseColumnTextForButtonValue = true;
+            nsf.servicingGRID.Columns.Insert(15, adlbtn);
         }
         public void manageservicingGridViewcolumns()
         {
@@ -197,14 +218,17 @@ namespace AfterSalesCSharp
             nsf.servicingGRID.Columns["SERVICING"].AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells;
             nsf.servicingGRID.Columns["DATE"].AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells;
             nsf.servicingGRID.Columns["ASSIGNED PERSONNEL"].AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells;
-            nsf.servicingGRID.Columns["REPORT"].Width = 100;
+            nsf.servicingGRID.Columns["REPORT"].Width = 200;
             nsf.servicingGRID.Columns["VIEW"].Width = 30;
             nsf.servicingGRID.Columns["DONE"].AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells;
             nsf.servicingGRID.Columns["NEEDED MATERIALS / REMARKS"].Width = 200;
             nsf.servicingGRID.Columns["mbtn"].Width = 30;
-            nsf.servicingGRID.Columns["FOR RESCHED"].AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells;
-            nsf.servicingGRID.Columns["FOR COSTING"].AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells;
-            nsf.servicingGRID.Columns["FOR QUOTATION / ADDITIONAL"].AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells;
+            nsf.servicingGRID.Columns["FOR RESCHED"].Width = 200;
+            nsf.servicingGRID.Columns["sbtn"].Width = 30;
+            nsf.servicingGRID.Columns["FOR COSTING"].Width = 200;
+            nsf.servicingGRID.Columns["cbtn"].Width = 30;
+            nsf.servicingGRID.Columns["FOR QUOTATION / ADDITIONAL"].Width = 200;
+            nsf.servicingGRID.Columns["adlbtn"].Width = 30;
         }
         public void comboboxautosuggest()
         {
@@ -255,6 +279,7 @@ namespace AfterSalesCSharp
                                   "'" + forquotation + "')";
                 sqlcmd = new SqlCommand(query, sql.sqlcon);
                 sqlcmd.ExecuteNonQuery();
+                updatestatus(cin);
                 sql.sqlcon.Close();
                 loadnewservicing(cin);
                 MetroMessageBox.Show(newSrevicingFRM.ActiveForm, "Data Added Successfully", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -288,21 +313,7 @@ namespace AfterSalesCSharp
                                   "FORQUOTATIONORADDITIONAL = '" + forquotation + "' where id = '" + id + "'";
                 sqlcmd = new SqlCommand(query, sql.sqlcon);
                 sqlcmd.ExecuteNonQuery();
-
-                if (status != "")
-                {
-                    string str = "update servicingtb set done = '--' where done ='' and cin = '" + cin + "'"+
-                                 "update callintb set status = 'Done' where cin = '" + cin + "'";
-                    sqlcmd = new SqlCommand(str, sql.sqlcon);
-                    sqlcmd.ExecuteNonQuery();
-                }
-                else
-                {
-                    string str ="update callintb set status = '' where cin = '" + cin + "'";
-                    sqlcmd = new SqlCommand(str, sql.sqlcon);
-                    sqlcmd.ExecuteNonQuery();
-                }
-
+                updatestatus(cin);
                 sql.sqlcon.Close();
                 loadnewservicing(cin);
                 MetroMessageBox.Show(newSrevicingFRM.ActiveForm, "Data Updated Successfully", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -316,6 +327,64 @@ namespace AfterSalesCSharp
                 sql.sqlcon.Close();
             }
         }
+
+        public void updatestatus(string cin)
+        {
+            try
+            {
+                string x = "declare @maxid as integer = (select max(id) from servicingtb where cin = '" + cin + "')"+
+                            "select case when FORCOSTING='' and not FORSCHED ='' then '1' else '0' end as forresched, "+
+                            "case when FORSCHED = '' and not FORCOSTING = '' then '1' else '0' end as forcosting, "+
+                            "case when not FORSCHED = '' and not FORCOSTING = '' then '1' else '0' end as forcostingresched "+
+                            "from SERVICINGTB where id=@maxid";
+                sqlcmd = new SqlCommand(x, sql.sqlcon);
+                string s="",d="",f="";
+                string query="";
+                SqlDataReader rdr = sqlcmd.ExecuteReader();
+                while (rdr.Read())
+                {
+                    s = rdr.GetString(0);
+                    d = rdr.GetString(1);
+                    f = rdr.GetString(2);
+                }
+                rdr.Close();
+                if (s == "1")
+                {
+                    query = "update callintb set status = 'FOR RE SCHEDULE' where cin = '" + cin + "'";
+                }
+                else if (d=="1")
+                {
+                    query = "update callintb set status = 'FOR COSTING' where cin = '" + cin + "'";
+                }
+                else if (f=="1")
+                {
+                    query = "update callintb set status = 'FOR COSTING AND RE SCHEDULE' where cin = '" + cin + "'";
+                }
+                else
+                {
+                    query = "update callintb set status = '' where cin = '" + cin + "'";
+                }
+                sqlcmd = new SqlCommand(query, sql.sqlcon);
+                sqlcmd.ExecuteNonQuery();
+
+                string getstatus = "declare @maxid as integer = (select max(id) from servicingtb where cin = '" + cin + "')" +
+                                   "select done from servicingtb where not done = '' and cin = '" + cin + "' and id = @maxid";
+                sqlcmd = new SqlCommand(getstatus, sql.sqlcon);
+                SqlDataReader read = sqlcmd.ExecuteReader();
+                if (read.HasRows == true)
+                {
+                    read.Close();
+                    string str = "update callintb set status = 'Done' where cin = '" + cin + "'";
+                    sqlcmd = new SqlCommand(str, sql.sqlcon);
+                    sqlcmd.ExecuteNonQuery();
+                }
+                read.Close();
+            }
+            catch (SqlException e)
+            {
+                MetroMessageBox.Show(newSrevicingFRM.ActiveForm, "" + e + "", "Sql Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
         public void deleteservicingsched(string id, string cin)
         {
             try
@@ -324,6 +393,7 @@ namespace AfterSalesCSharp
                 string query = "delete from servicingtb where id = '" + id + "'";
                 sqlcmd = new SqlCommand(query, sql.sqlcon);
                 sqlcmd.ExecuteNonQuery();
+                updatestatus(cin);
                 sql.sqlcon.Close();
                 loadnewservicing(cin);
                 MetroMessageBox.Show(newSrevicingFRM.ActiveForm, "Data Deleted Successfully", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);

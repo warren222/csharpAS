@@ -29,11 +29,11 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             this.MetroTabControl1 = new MetroFramework.Controls.MetroTabControl();
             this.MetroTabPage1 = new MetroFramework.Controls.MetroTabPage();
             this.deleteBTN = new MetroFramework.Controls.MetroTextBox.MetroTextButton();
@@ -336,7 +336,7 @@
             this.CLEARSEARCHRESULTbtn.Image = null;
             this.CLEARSEARCHRESULTbtn.Location = new System.Drawing.Point(471, 415);
             this.CLEARSEARCHRESULTbtn.Name = "CLEARSEARCHRESULTbtn";
-            this.CLEARSEARCHRESULTbtn.Size = new System.Drawing.Size(455, 23);
+            this.CLEARSEARCHRESULTbtn.Size = new System.Drawing.Size(438, 23);
             this.CLEARSEARCHRESULTbtn.Style = MetroFramework.MetroColorStyle.Silver;
             this.CLEARSEARCHRESULTbtn.TabIndex = 473;
             this.CLEARSEARCHRESULTbtn.Text = "clear search result";
@@ -348,7 +348,7 @@
             // searchresultLBL
             // 
             this.searchresultLBL.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.searchresultLBL.Location = new System.Drawing.Point(607, 115);
+            this.searchresultLBL.Location = new System.Drawing.Point(590, 115);
             this.searchresultLBL.Name = "searchresultLBL";
             this.searchresultLBL.Size = new System.Drawing.Size(132, 24);
             this.searchresultLBL.StateCommon.ShortText.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
@@ -363,9 +363,9 @@
             this.searchResultGridview.AllowUserToOrderColumns = true;
             this.searchResultGridview.AllowUserToResizeColumns = false;
             this.searchResultGridview.AllowUserToResizeRows = false;
-            dataGridViewCellStyle17.BackColor = System.Drawing.Color.WhiteSmoke;
-            dataGridViewCellStyle17.ForeColor = System.Drawing.Color.Black;
-            this.searchResultGridview.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle17;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.WhiteSmoke;
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            this.searchResultGridview.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.searchResultGridview.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.searchResultGridview.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCells;
@@ -380,7 +380,7 @@
             this.searchResultGridview.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.Color.Black;
             this.searchResultGridview.RowTemplate.Height = 27;
             this.searchResultGridview.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.searchResultGridview.Size = new System.Drawing.Size(455, 260);
+            this.searchResultGridview.Size = new System.Drawing.Size(438, 260);
             this.searchResultGridview.StateCommon.Background.Color1 = System.Drawing.Color.White;
             this.searchResultGridview.StateCommon.BackStyle = ComponentFactory.Krypton.Toolkit.PaletteBackStyle.GridBackgroundList;
             this.searchResultGridview.StateCommon.DataCell.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
@@ -1037,9 +1037,9 @@
             this.callinGRID.AllowUserToOrderColumns = true;
             this.callinGRID.AllowUserToResizeColumns = false;
             this.callinGRID.AllowUserToResizeRows = false;
-            dataGridViewCellStyle18.BackColor = System.Drawing.Color.WhiteSmoke;
-            dataGridViewCellStyle18.ForeColor = System.Drawing.Color.Black;
-            this.callinGRID.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle18;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.WhiteSmoke;
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
+            this.callinGRID.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle2;
             this.callinGRID.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
@@ -1369,9 +1369,9 @@
             this.servicingGridView.AllowUserToOrderColumns = true;
             this.servicingGridView.AllowUserToResizeColumns = false;
             this.servicingGridView.AllowUserToResizeRows = false;
-            dataGridViewCellStyle16.BackColor = System.Drawing.Color.WhiteSmoke;
-            dataGridViewCellStyle16.ForeColor = System.Drawing.Color.Black;
-            this.servicingGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle16;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.WhiteSmoke;
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
+            this.servicingGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle3;
             this.servicingGridView.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
@@ -1442,9 +1442,9 @@
             this.KryptonDataGridView1.AllowUserToOrderColumns = true;
             this.KryptonDataGridView1.AllowUserToResizeColumns = false;
             this.KryptonDataGridView1.AllowUserToResizeRows = false;
-            dataGridViewCellStyle19.BackColor = System.Drawing.Color.WhiteSmoke;
-            dataGridViewCellStyle19.ForeColor = System.Drawing.Color.Black;
-            this.KryptonDataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle19;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.WhiteSmoke;
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
+            this.KryptonDataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
             this.KryptonDataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
@@ -1570,9 +1570,9 @@
             this.CallLogGrid.AllowUserToOrderColumns = true;
             this.CallLogGrid.AllowUserToResizeColumns = false;
             this.CallLogGrid.AllowUserToResizeRows = false;
-            dataGridViewCellStyle20.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            dataGridViewCellStyle20.ForeColor = System.Drawing.Color.Black;
-            this.CallLogGrid.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle20;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.Black;
+            this.CallLogGrid.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
             this.CallLogGrid.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.CallLogGrid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;

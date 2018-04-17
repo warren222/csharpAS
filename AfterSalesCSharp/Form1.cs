@@ -257,9 +257,10 @@ namespace AfterSalesCSharp
 
         private void callinGRID_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            DataGridViewRow row = callinGRID.Rows[e.RowIndex];
+           
             if ((callinGRID.RowCount >= 0) && (e.RowIndex >= 0))
             {
+                DataGridViewRow row = callinGRID.Rows[e.RowIndex];
                 tempcin = row.Cells[3].Value.ToString();
                 MessageBoxIcon icon = MessageBoxIcon.Question;
                 if (e.ColumnIndex == 11)

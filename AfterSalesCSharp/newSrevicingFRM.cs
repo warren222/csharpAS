@@ -135,17 +135,29 @@ namespace AfterSalesCSharp
                 {
                     MetroMessageBox.Show(this, "" + row.Cells[8].Value.ToString() + "", "Needed Materials / Remarks", MessageBoxButtons.OK, MessageBoxIcon.Question);
                 }
+                else if (e.ColumnIndex == 11)
+                {
+                    MetroMessageBox.Show(this, "" + row.Cells[10].Value.ToString() + "", "FOR RESCHED", MessageBoxButtons.OK, MessageBoxIcon.Question);
+                }
+                else if (e.ColumnIndex == 13)
+                {
+                    MetroMessageBox.Show(this, "" + row.Cells[12].Value.ToString() + "", "FOR COSTING", MessageBoxButtons.OK, MessageBoxIcon.Question);
+                }
+                else if (e.ColumnIndex == 15)
+                {
+                    MetroMessageBox.Show(this, "" + row.Cells[14].Value.ToString() + "", "FOR QUOTATION / ADDITIONAL", MessageBoxButtons.OK, MessageBoxIcon.Question);
+                }
                 savetotemp();
 
                 tempid = row.Cells[0].Value.ToString();
+                doneTXT.Text = row.Cells[1].Value.ToString();
                 servicingdate.Text = row.Cells[4].Value.ToString();
                 assignedpersonnelTXT.Text = row.Cells[5].Value.ToString();
                 assigneesreportTXT.Text = row.Cells[6].Value.ToString();
-                doneTXT.Text = row.Cells[1].Value.ToString();
                 remarksTXT.Text = row.Cells[8].Value.ToString();
                 forschedTXT.Text = row.Cells[10].Value.ToString();
-                forcostingTXT.Text = row.Cells[11].Value.ToString();
-                forquotationTXT.Text = row.Cells[12].Value.ToString();
+                forcostingTXT.Text = row.Cells[12].Value.ToString();
+                forquotationTXT.Text = row.Cells[14].Value.ToString();
 
                 cancelBTN.Visible = true;
                 deleteBTN.Visible = true;

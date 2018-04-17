@@ -152,6 +152,12 @@ namespace AfterSalesCSharp
                     frm1.callinGRID.Rows[i].Cells["STATUS"].Style.Font = new Font("Century Gothic", 9, FontStyle.Bold);
                     frm1.callinGRID.Rows[i].Cells["STATUS"].Style.ForeColor = Color.White;
                 }
+                else if (((a == "FOR COSTING")||(a=="FOR RE SCHEDULE")||(a=="FOR COSTING AND RE SCHEDULE")))
+                {
+                    frm1.callinGRID.Rows[i].Cells["STATUS"].Style.BackColor = System.Drawing.Color.LimeGreen;
+                    frm1.callinGRID.Rows[i].Cells["STATUS"].Style.Font = new Font("Century Gothic", 9, FontStyle.Bold);
+                    frm1.callinGRID.Rows[i].Cells["STATUS"].Style.ForeColor = Color.White;
+                }
             }
 
 
