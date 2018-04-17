@@ -74,6 +74,10 @@ namespace AfterSalesCSharp
         {
             DataGridViewButtonColumn btn = new DataGridViewButtonColumn();
             DataGridViewButtonColumn vs = new DataGridViewButtonColumn();
+            DataGridViewButtonColumn mbtn = new DataGridViewButtonColumn();
+            DataGridViewButtonColumn sbtn = new DataGridViewButtonColumn();
+            DataGridViewButtonColumn cbtn = new DataGridViewButtonColumn();
+            DataGridViewButtonColumn adlbtn = new DataGridViewButtonColumn();
 
             btn.Name ="btn";
             btn.HeaderText ="";
@@ -85,8 +89,32 @@ namespace AfterSalesCSharp
             vs.Text = "servicing";
             vs.UseColumnTextForButtonValue = true;
 
+            mbtn.Name = "mbtn";
+            mbtn.HeaderText = "";
+            mbtn.Text = "...";
+            mbtn.UseColumnTextForButtonValue = true;
+
+            sbtn.Name = "sbtn";
+            sbtn.HeaderText = "";
+            sbtn.Text = "...";
+            sbtn.UseColumnTextForButtonValue = true;
+
+            cbtn.Name = "cbtn";
+            cbtn.HeaderText = "";
+            cbtn.Text = "...";
+            cbtn.UseColumnTextForButtonValue = true;
+
+            adlbtn.Name = "adlbtn";
+            adlbtn.HeaderText = "";
+            adlbtn.Text = "...";
+            adlbtn.UseColumnTextForButtonValue = true;
+
             frm1.servicingGridView.Columns.Insert(4, vs);
             frm1.servicingGridView.Columns.Insert(9, btn);
+            frm1.servicingGridView.Columns.Insert(11, mbtn);
+            frm1.servicingGridView.Columns.Insert(13, sbtn);
+            frm1.servicingGridView.Columns.Insert(15, cbtn);
+            frm1.servicingGridView.Columns.Insert(17, adlbtn);
 
         }
         public void managecolumn()
@@ -104,18 +132,23 @@ namespace AfterSalesCSharp
 
             frm1.servicingGridView.Columns["PROJECT"].AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells;
             frm1.servicingGridView.Columns["ID"].Visible = false;
+            frm1.servicingGridView.Columns["CIN"].Frozen = true;
             frm1.servicingGridView.Columns["CIN"].AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells;
             frm1.servicingGridView.Columns["SERVICING"].AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells;
             frm1.servicingGridView.Columns["DATE"].AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells;
             frm1.servicingGridView.Columns["ASSIGNED PERSONNEL"].AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells;
             frm1.servicingGridView.Columns["DONE"].AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells;
-            frm1.servicingGridView.Columns["NEEDED MATERIALS / REMARKS"].AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells;
-            frm1.servicingGridView.Columns["FOR RESCHED"].AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells;
-            frm1.servicingGridView.Columns["FOR COSTING"].AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells;
-            frm1.servicingGridView.Columns["FOR QUOTATION / ADDITIONAL"].AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells;
-
-            frm1.servicingGridView.Columns["report"].Width=100;
+            frm1.servicingGridView.Columns["report"].Width = 200;
             frm1.servicingGridView.Columns["btn"].Width = 30;
+            frm1.servicingGridView.Columns["NEEDED MATERIALS / REMARKS"].Width = 200;
+            frm1.servicingGridView.Columns["mbtn"].Width = 30;
+            frm1.servicingGridView.Columns["FOR RESCHED"].Width = 200;
+            frm1.servicingGridView.Columns["sbtn"].Width = 30;
+            frm1.servicingGridView.Columns["FOR COSTING"].Width = 200;
+            frm1.servicingGridView.Columns["cbtn"].Width = 30;
+            frm1.servicingGridView.Columns["FOR QUOTATION / ADDITIONAL"].Width=200;
+            frm1.servicingGridView.Columns["adlbtn"].Width = 30;
+    
         }
         //newservivingFRM load records as per cin
         public void loadnewservicing(string cin)

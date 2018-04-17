@@ -568,6 +568,22 @@ namespace AfterSalesCSharp
                 {
                     MetroMessageBox.Show(this, "" + row.Cells[8].Value.ToString() + "", "Assignee's Report", MessageBoxButtons.OK, MessageBoxIcon.Question);
                 }
+                else if (e.ColumnIndex == 11)
+                {
+                    MetroMessageBox.Show(this, "" + row.Cells[10].Value.ToString() + "", "Needed Materials / Remarks", MessageBoxButtons.OK, MessageBoxIcon.Question);
+                }
+                else if (e.ColumnIndex == 13)
+                {
+                    MetroMessageBox.Show(this, "" + row.Cells[12].Value.ToString() + "", "FOR RESCHED", MessageBoxButtons.OK, MessageBoxIcon.Question);
+                }
+                else if (e.ColumnIndex == 15)
+                {
+                    MetroMessageBox.Show(this, "" + row.Cells[14].Value.ToString() + "", "FOR COSTING", MessageBoxButtons.OK, MessageBoxIcon.Question);
+                }
+                else if (e.ColumnIndex == 17)
+                {
+                    MetroMessageBox.Show(this, "" + row.Cells[16].Value.ToString() + "", "FOR QUOTATION / ADDITIONAL", MessageBoxButtons.OK, MessageBoxIcon.Question);
+                }
                 else if (e.ColumnIndex == 4)
                 {
                     NSF = new newSrevicingFRM();
@@ -624,6 +640,12 @@ namespace AfterSalesCSharp
             else if (rownum == "MAX")
                 rownum = " ";
             return rownum;
+        }
+
+        private void qurefreshBTN_Click(object sender, EventArgs e)
+        {
+            quClass q = new quClass(this);
+            q.loadquotaiontb();
         }
     }
 }
