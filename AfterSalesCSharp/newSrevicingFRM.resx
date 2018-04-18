@@ -137,6 +137,13 @@
         AElFTkSuQmCC
 </value>
   </data>
+  <data name="addBTN.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAADhJREFUOE9j
+        GPRABIrJBsuhmGwwxAwABRZMAww/gGJ0cawBS7EB2ABMA9lgGBgACiyiA2wgAAMDAKl+GQHXrSzsAAAA
+        AElFTkSuQmCC
+</value>
+  </data>
   <data name="updateBTN.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAPNJREFUOE+d
@@ -145,13 +152,6 @@
         uogdzv66gLxVHlyhhmuclDKP9jKY4hFhueA22bpLNbrrCiE1uku+T75zgaBcsBVAXI3HpdHGN+SH9WAv
         iz50CxtvsG7VDHUUUcUHfnALbQl8wbqI1Sce8G8FyM0bDDHGABVo996eD+/oHM48lsSdGp0yjD1Auj6y
         mKc9sAAAAABJRU5ErkJggg==
-</value>
-  </data>
-  <data name="addBTN.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAADhJREFUOE9j
-        GPRABIrJBsuhmGwwxAwABRZMAww/gGJ0cawBS7EB2ABMA9lgGBgACiyiA2wgAAMDAKl+GQHXrSzsAAAA
-        AElFTkSuQmCC
 </value>
   </data>
 </root>

@@ -117,4 +117,62 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="metroTextButton1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAPNJREFUOE+d
+        0bFqwlAUgOFQhYIg2k1cioMgLjq6VnDv1qV9CkEqgrsgOAkKri4tiJQ+gDiU4tTBWcFBcFBEaQVL0f94
+        UxrjtSH54SMnIbkhuYaLyoiq0VsjvKjRuRyeMcHSPO5M9zibHy383qwzRwTaGtjiFSXk0cQa1kWecNIN
+        uogdzv66gLxVHlyhhmuclDKP9jKY4hFhueA22bpLNbrrCiE1uku+T75zgaBcsBVAXI3HpdHGN+SH9WAv
+        iz50CxtvsG7VDHUUUcUHfnALbQl8wbqI1Sce8G8FyM0bDDHGABVo996eD+/oHM48lsSdGp0yjD1Auj6y
+        mKc9sAAAAABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="addBTN.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAADhJREFUOE9j
+        GPRABIrJBsuhmGwwxAwABRZMAww/gGJ0cawBS7EB2ABMA9lgGBgACiyiA2wgAAMDAKl+GQHXrSzsAAAA
+        AElFTkSuQmCC
+</value>
+  </data>
+  <data name="deleteBTN.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAFdJREFUOE/N
+        kkEOABAMBPsRj/cOn2PDJhK0xYFJRBMzPZGviOWEOqrAgTuAh9TuFaajCWZMZqI7Jn2wHROGRzG4WsAY
+        dz+7mAXuJZpoLjGFgupcf+UXiGTjWRWpHKi5uAAAAABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="updateBTN.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAPNJREFUOE+d
+        0bFqwlAUgOFQhYIg2k1cioMgLjq6VnDv1qV9CkEqgrsgOAkKri4tiJQ+gDiU4tTBWcFBcFBEaQVL0f94
+        UxrjtSH54SMnIbkhuYaLyoiq0VsjvKjRuRyeMcHSPO5M9zibHy383qwzRwTaGtjiFSXk0cQa1kWecNIN
+        uogdzv66gLxVHlyhhmuclDKP9jKY4hFhueA22bpLNbrrCiE1uku+T75zgaBcsBVAXI3HpdHGN+SH9WAv
+        iz50CxtvsG7VDHUUUcUHfnALbQl8wbqI1Sce8G8FyM0bDDHGABVo996eD+/oHM48lsSdGp0yjD1Auj6y
+        mKc9sAAAAABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="textBox1.Text" xml:space="preserve">
+    <value>Dear Sir/Madam:
+           
+          Please find as follows actual cost of parts and / materials / accessories used and services conducted in reference to the service/repair works you have requested. However, do note that the labor / service is shall be free-of-charge unless otherwise not covered by usual servicing (i.e. re-installation and major repairs,etc.). only replaceable parts not covered by warranty will be billed accordingly after acceptance of works.</value>
+  </data>
+  <data name="resource.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAMpJREFUOE/N
+        0j/rQVEcx/GLpBgk9BvNSDaPwWSx2GQ3/J6BWAwmk8EgMZF/xcBzU97f8026Hee4ZfGuV32OurfbvQJP
+        acR1Rq+IKU5YYoMdmvhYFVfUzemVPMkYI3NylMINOXN63wBtnXY9dHQ6S+Ki026NjE5vM/zpDCcvK0pD
+        lHWGm6Og05t8mazOcC3863QmF+512sVwRMWc7OQPtULDnBzlcYZ8Efmsz2qQm9/Rlx98JdCFvNQtDpig
+        BLk40k18/dZNFjq/KggeA2odMdIp9vcAAAAASUVORK5CYII=
+</value>
+  </data>
+  <data name="resource.Image1" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAMpJREFUOE/N
+        0j/rQVEcx/GLpBgk9BvNSDaPwWSx2GQ3/J6BWAwmk8EgMZF/xcBzU97f8026Hee4ZfGuV32OurfbvQJP
+        acR1Rq+IKU5YYoMdmvhYFVfUzemVPMkYI3NylMINOXN63wBtnXY9dHQ6S+Ki026NjE5vM/zpDCcvK0pD
+        lHWGm6Og05t8mazOcC3863QmF+512sVwRMWc7OQPtULDnBzlcYZ8Efmsz2qQm9/Rlx98JdCFvNQtDpig
+        BLk40k18/dZNFjq/KggeA2odMdIp9vcAAAAASUVORK5CYII=
+</value>
+  </data>
 </root>

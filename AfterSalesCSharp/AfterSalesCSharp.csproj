@@ -67,6 +67,12 @@
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
     <Compile Include="newcallinclass.cs" />
+    <Compile Include="newQUform.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="newQUform.Designer.cs">
+      <DependentUpon>newQUform.cs</DependentUpon>
+    </Compile>
     <Compile Include="newSrevicingFRM.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -80,6 +86,9 @@
     <Compile Include="sql.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="newQUform.resx">
+      <DependentUpon>newQUform.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="newSrevicingFRM.resx">
       <DependentUpon>newSrevicingFRM.cs</DependentUpon>

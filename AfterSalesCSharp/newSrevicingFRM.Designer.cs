@@ -62,8 +62,8 @@
             this.Panel1.Controls.Add(this.deleteBTN);
             this.Panel1.Controls.Add(this.Panel4);
             this.Panel1.Controls.Add(this.cancelBTN);
-            this.Panel1.Controls.Add(this.updateBTN);
             this.Panel1.Controls.Add(this.addBTN);
+            this.Panel1.Controls.Add(this.updateBTN);
             this.Panel1.Location = new System.Drawing.Point(12, 61);
             this.Panel1.Name = "Panel1";
             this.Panel1.Size = new System.Drawing.Size(1139, 509);

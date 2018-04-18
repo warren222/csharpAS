@@ -23,6 +23,7 @@ namespace AfterSalesCSharp
         }
 
         newSrevicingFRM NSF;
+        newQUform quf;
         SqlCommand sqlcmd = new SqlCommand();
         SqlDataAdapter da = new SqlDataAdapter();
 
@@ -644,8 +645,30 @@ namespace AfterSalesCSharp
 
         private void qurefreshBTN_Click(object sender, EventArgs e)
         {
-            quClass q = new quClass(this);
+            quClass q = new quClass(this,quf);
             q.loadquotaiontb();
+        }
+
+        private void quaddnewBTN_Click(object sender, EventArgs e)
+        {
+            newQUform q = new newQUform();
+            q.ShowDialog();
+        }
+
+        private void quGridView_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if ((quGridView.RowCount >= 0) && (e.RowIndex >= 0))
+            {
+                DataGridViewRow rows = quGridView.Rows[e.RowIndex];
+                if (e.ColumnIndex == 1)
+                {
+                    newQUform qu = new newQUform();
+                    qu.aseno.Text = rows.Cells[0].Value.ToString();
+                    qu.aseno.Enabled = false;
+                    qu.panel1.Enabled = true;
+                    qu.ShowDialog();
+                }
+            }
         }
     }
 }

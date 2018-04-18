@@ -32,8 +32,8 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             this.MetroTabControl1 = new MetroFramework.Controls.MetroTabControl();
             this.MetroTabPage1 = new MetroFramework.Controls.MetroTabPage();
             this.deleteBTN = new MetroFramework.Controls.MetroTextBox.MetroTextButton();
@@ -95,13 +95,14 @@
             this.servicingrownumber = new System.Windows.Forms.ComboBox();
             this.servicingGridView = new ComponentFactory.Krypton.Toolkit.KryptonDataGridView();
             this.servicingrefreshBTN = new MetroFramework.Controls.MetroTextBox.MetroTextButton();
+            this.metroTabPage4 = new MetroFramework.Controls.MetroTabPage();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.qurefreshBTN = new MetroFramework.Controls.MetroTextBox.MetroTextButton();
+            this.quGridView = new ComponentFactory.Krypton.Toolkit.KryptonDataGridView();
             this.Panel5 = new System.Windows.Forms.Panel();
             this.KryptonLabel3 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.CallLogGrid = new ComponentFactory.Krypton.Toolkit.KryptonDataGridView();
-            this.metroTabPage4 = new MetroFramework.Controls.MetroTabPage();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.quGridView = new ComponentFactory.Krypton.Toolkit.KryptonDataGridView();
-            this.qurefreshBTN = new MetroFramework.Controls.MetroTextBox.MetroTextButton();
+            this.quaddnewBTN = new MetroFramework.Controls.MetroTextBox.MetroTextButton();
             this.MetroTabControl1.SuspendLayout();
             this.MetroTabPage1.SuspendLayout();
             this.newcallinPNL.SuspendLayout();
@@ -115,11 +116,11 @@
             this.MetroTabPage3.SuspendLayout();
             this.Panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.servicingGridView)).BeginInit();
-            this.Panel5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.CallLogGrid)).BeginInit();
             this.metroTabPage4.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.quGridView)).BeginInit();
+            this.Panel5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.CallLogGrid)).BeginInit();
             this.SuspendLayout();
             // 
             // MetroTabControl1
@@ -262,7 +263,7 @@
             this.assignedpersonnelTXT.UseSelectable = true;
             this.assignedpersonnelTXT.WaterMark = "Enter Assigned Personnel";
             this.assignedpersonnelTXT.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.assignedpersonnelTXT.WaterMarkFont = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.assignedpersonnelTXT.WaterMarkFont = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
             // datevisitedTXT
             // 
@@ -296,7 +297,7 @@
             this.datevisitedTXT.UseSelectable = true;
             this.datevisitedTXT.WaterMark = "Enter 1st Date Visited";
             this.datevisitedTXT.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.datevisitedTXT.WaterMarkFont = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.datevisitedTXT.WaterMarkFont = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
             // Panel7
             // 
@@ -336,7 +337,7 @@
             this.CLEARSEARCHRESULTbtn.Image = null;
             this.CLEARSEARCHRESULTbtn.Location = new System.Drawing.Point(471, 415);
             this.CLEARSEARCHRESULTbtn.Name = "CLEARSEARCHRESULTbtn";
-            this.CLEARSEARCHRESULTbtn.Size = new System.Drawing.Size(438, 23);
+            this.CLEARSEARCHRESULTbtn.Size = new System.Drawing.Size(421, 23);
             this.CLEARSEARCHRESULTbtn.Style = MetroFramework.MetroColorStyle.Silver;
             this.CLEARSEARCHRESULTbtn.TabIndex = 473;
             this.CLEARSEARCHRESULTbtn.Text = "clear search result";
@@ -348,7 +349,7 @@
             // searchresultLBL
             // 
             this.searchresultLBL.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.searchresultLBL.Location = new System.Drawing.Point(590, 115);
+            this.searchresultLBL.Location = new System.Drawing.Point(573, 115);
             this.searchresultLBL.Name = "searchresultLBL";
             this.searchresultLBL.Size = new System.Drawing.Size(132, 24);
             this.searchresultLBL.StateCommon.ShortText.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
@@ -380,7 +381,7 @@
             this.searchResultGridview.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.Color.Black;
             this.searchResultGridview.RowTemplate.Height = 27;
             this.searchResultGridview.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.searchResultGridview.Size = new System.Drawing.Size(438, 260);
+            this.searchResultGridview.Size = new System.Drawing.Size(421, 260);
             this.searchResultGridview.StateCommon.Background.Color1 = System.Drawing.Color.White;
             this.searchResultGridview.StateCommon.BackStyle = ComponentFactory.Krypton.Toolkit.PaletteBackStyle.GridBackgroundList;
             this.searchResultGridview.StateCommon.DataCell.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
@@ -442,7 +443,7 @@
             this.calldateTXT.UseSelectable = true;
             this.calldateTXT.WaterMark = "Enter Date";
             this.calldateTXT.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.calldateTXT.WaterMarkFont = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.calldateTXT.WaterMarkFont = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
             // calldategen
             // 
@@ -511,7 +512,7 @@
             this.otherTXT.UseSelectable = true;
             this.otherTXT.WaterMark = "Enter Other Concern";
             this.otherTXT.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.otherTXT.WaterMarkFont = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.otherTXT.WaterMarkFont = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
             // doorsTXT
             // 
@@ -547,7 +548,7 @@
             this.doorsTXT.UseSelectable = true;
             this.doorsTXT.WaterMark = "Enter Doors Concern";
             this.doorsTXT.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.doorsTXT.WaterMarkFont = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.doorsTXT.WaterMarkFont = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
             // windowsTXT
             // 
@@ -583,7 +584,7 @@
             this.windowsTXT.UseSelectable = true;
             this.windowsTXT.WaterMark = "Enter Windows Concern";
             this.windowsTXT.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.windowsTXT.WaterMarkFont = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.windowsTXT.WaterMarkFont = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
             // screenTXT
             // 
@@ -619,7 +620,7 @@
             this.screenTXT.UseSelectable = true;
             this.screenTXT.WaterMark = "Enter Screen Concern";
             this.screenTXT.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.screenTXT.WaterMarkFont = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.screenTXT.WaterMarkFont = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
             // foilTXT
             // 
@@ -654,7 +655,7 @@
             this.foilTXT.UseSelectable = true;
             this.foilTXT.WaterMark = "Enter Profile Color (FOIL)";
             this.foilTXT.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.foilTXT.WaterMarkFont = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.foilTXT.WaterMarkFont = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             this.foilTXT.ButtonClick += new MetroFramework.Controls.MetroTextBox.ButClick(this.foilTXT_ButtonClick);
             // 
             // emailTXT
@@ -690,7 +691,7 @@
             this.emailTXT.UseSelectable = true;
             this.emailTXT.WaterMark = "Enter E-mail Address";
             this.emailTXT.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.emailTXT.WaterMarkFont = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.emailTXT.WaterMarkFont = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             this.emailTXT.ButtonClick += new MetroFramework.Controls.MetroTextBox.ButClick(this.emailTXT_ButtonClick);
             // 
             // contactTXT
@@ -726,7 +727,7 @@
             this.contactTXT.UseSelectable = true;
             this.contactTXT.WaterMark = "Enter Contact Number";
             this.contactTXT.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.contactTXT.WaterMarkFont = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.contactTXT.WaterMarkFont = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             this.contactTXT.ButtonClick += new MetroFramework.Controls.MetroTextBox.ButClick(this.contactTXT_ButtonClick);
             // 
             // recipientTXT
@@ -762,7 +763,7 @@
             this.recipientTXT.UseSelectable = true;
             this.recipientTXT.WaterMark = "Enter Recipient";
             this.recipientTXT.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.recipientTXT.WaterMarkFont = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.recipientTXT.WaterMarkFont = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             this.recipientTXT.ButtonClick += new MetroFramework.Controls.MetroTextBox.ButClick(this.recipientTXT_ButtonClick);
             // 
             // addressTXT
@@ -798,7 +799,7 @@
             this.addressTXT.UseSelectable = true;
             this.addressTXT.WaterMark = "Enter Address";
             this.addressTXT.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.addressTXT.WaterMarkFont = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.addressTXT.WaterMarkFont = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             this.addressTXT.ButtonClick += new MetroFramework.Controls.MetroTextBox.ButClick(this.addressTXT_ButtonClick);
             // 
             // projectTXT
@@ -835,7 +836,7 @@
             this.projectTXT.UseSelectable = true;
             this.projectTXT.WaterMark = "Enter Project Name";
             this.projectTXT.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.projectTXT.WaterMarkFont = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.projectTXT.WaterMarkFont = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             this.projectTXT.ButtonClick += new MetroFramework.Controls.MetroTextBox.ButClick(this.projectTXT_ButtonClick);
             // 
             // addBTN
@@ -1417,6 +1418,89 @@
             this.servicingrefreshBTN.UseVisualStyleBackColor = true;
             this.servicingrefreshBTN.Click += new System.EventHandler(this.servicingrefreshBTN_Click);
             // 
+            // metroTabPage4
+            // 
+            this.metroTabPage4.Controls.Add(this.panel1);
+            this.metroTabPage4.HorizontalScrollbarBarColor = true;
+            this.metroTabPage4.HorizontalScrollbarHighlightOnWheel = false;
+            this.metroTabPage4.HorizontalScrollbarSize = 10;
+            this.metroTabPage4.Location = new System.Drawing.Point(4, 41);
+            this.metroTabPage4.Name = "metroTabPage4";
+            this.metroTabPage4.Size = new System.Drawing.Size(1016, 593);
+            this.metroTabPage4.TabIndex = 3;
+            this.metroTabPage4.Text = "Quotation";
+            this.metroTabPage4.VerticalScrollbarBarColor = true;
+            this.metroTabPage4.VerticalScrollbarHighlightOnWheel = false;
+            this.metroTabPage4.VerticalScrollbarSize = 10;
+            // 
+            // panel1
+            // 
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.quaddnewBTN);
+            this.panel1.Controls.Add(this.qurefreshBTN);
+            this.panel1.Controls.Add(this.quGridView);
+            this.panel1.Location = new System.Drawing.Point(3, 3);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1010, 594);
+            this.panel1.TabIndex = 2;
+            // 
+            // qurefreshBTN
+            // 
+            this.qurefreshBTN.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.qurefreshBTN.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.qurefreshBTN.Image = null;
+            this.qurefreshBTN.Location = new System.Drawing.Point(883, 37);
+            this.qurefreshBTN.Name = "qurefreshBTN";
+            this.qurefreshBTN.Size = new System.Drawing.Size(124, 19);
+            this.qurefreshBTN.Style = MetroFramework.MetroColorStyle.Silver;
+            this.qurefreshBTN.TabIndex = 472;
+            this.qurefreshBTN.Text = "Refresh Table";
+            this.qurefreshBTN.UseSelectable = true;
+            this.qurefreshBTN.UseVisualStyleBackColor = true;
+            this.qurefreshBTN.Click += new System.EventHandler(this.qurefreshBTN_Click);
+            // 
+            // quGridView
+            // 
+            this.quGridView.AllowUserToAddRows = false;
+            this.quGridView.AllowUserToDeleteRows = false;
+            this.quGridView.AllowUserToOrderColumns = true;
+            this.quGridView.AllowUserToResizeColumns = false;
+            this.quGridView.AllowUserToResizeRows = false;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.WhiteSmoke;
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
+            this.quGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
+            this.quGridView.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.quGridView.ColumnHeadersHeight = 30;
+            this.quGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.quGridView.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.quGridView.Location = new System.Drawing.Point(0, 62);
+            this.quGridView.Name = "quGridView";
+            this.quGridView.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Office2010Silver;
+            this.quGridView.ReadOnly = true;
+            this.quGridView.RowHeadersWidth = 40;
+            this.quGridView.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.Color.Black;
+            this.quGridView.RowTemplate.Height = 27;
+            this.quGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.quGridView.Size = new System.Drawing.Size(1011, 525);
+            this.quGridView.StateCommon.Background.Color1 = System.Drawing.Color.WhiteSmoke;
+            this.quGridView.StateCommon.BackStyle = ComponentFactory.Krypton.Toolkit.PaletteBackStyle.GridBackgroundList;
+            this.quGridView.StateCommon.DataCell.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.quGridView.StateCommon.DataCell.Content.Font = new System.Drawing.Font("Segoe UI", 8F);
+            this.quGridView.StateCommon.HeaderColumn.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.quGridView.StateCommon.HeaderColumn.Border.Width = 0;
+            this.quGridView.StateCommon.HeaderColumn.Content.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.quGridView.StateCommon.HeaderColumn.Content.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.quGridView.StateCommon.HeaderColumn.Content.Hint = ComponentFactory.Krypton.Toolkit.PaletteTextHint.AntiAlias;
+            this.quGridView.TabIndex = 467;
+            this.quGridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.quGridView_CellClick);
+            // 
             // Panel5
             // 
             this.Panel5.BackColor = System.Drawing.Color.White;
@@ -1487,86 +1571,20 @@
             this.CallLogGrid.TabIndex = 464;
             this.CallLogGrid.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.CallLogGrid_CellClick);
             // 
-            // metroTabPage4
+            // quaddnewBTN
             // 
-            this.metroTabPage4.Controls.Add(this.panel1);
-            this.metroTabPage4.HorizontalScrollbarBarColor = true;
-            this.metroTabPage4.HorizontalScrollbarHighlightOnWheel = false;
-            this.metroTabPage4.HorizontalScrollbarSize = 10;
-            this.metroTabPage4.Location = new System.Drawing.Point(4, 41);
-            this.metroTabPage4.Name = "metroTabPage4";
-            this.metroTabPage4.Size = new System.Drawing.Size(1016, 593);
-            this.metroTabPage4.TabIndex = 3;
-            this.metroTabPage4.Text = "Quotation";
-            this.metroTabPage4.VerticalScrollbarBarColor = true;
-            this.metroTabPage4.VerticalScrollbarHighlightOnWheel = false;
-            this.metroTabPage4.VerticalScrollbarSize = 10;
-            // 
-            // panel1
-            // 
-            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel1.BackColor = System.Drawing.Color.White;
-            this.panel1.Controls.Add(this.qurefreshBTN);
-            this.panel1.Controls.Add(this.quGridView);
-            this.panel1.Location = new System.Drawing.Point(3, 3);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1010, 594);
-            this.panel1.TabIndex = 2;
-            // 
-            // quGridView
-            // 
-            this.quGridView.AllowUserToAddRows = false;
-            this.quGridView.AllowUserToDeleteRows = false;
-            this.quGridView.AllowUserToOrderColumns = true;
-            this.quGridView.AllowUserToResizeColumns = false;
-            this.quGridView.AllowUserToResizeRows = false;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.WhiteSmoke;
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
-            this.quGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
-            this.quGridView.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.quGridView.ColumnHeadersHeight = 30;
-            this.quGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            this.quGridView.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.quGridView.Location = new System.Drawing.Point(0, 62);
-            this.quGridView.Name = "quGridView";
-            this.quGridView.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Office2010Silver;
-            this.quGridView.ReadOnly = true;
-            this.quGridView.RowHeadersWidth = 40;
-            this.quGridView.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.Color.Black;
-            this.quGridView.RowTemplate.Height = 27;
-            this.quGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.quGridView.Size = new System.Drawing.Size(1011, 525);
-            this.quGridView.StateCommon.Background.Color1 = System.Drawing.Color.WhiteSmoke;
-            this.quGridView.StateCommon.BackStyle = ComponentFactory.Krypton.Toolkit.PaletteBackStyle.GridBackgroundList;
-            this.quGridView.StateCommon.DataCell.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.quGridView.StateCommon.DataCell.Content.Font = new System.Drawing.Font("Segoe UI", 8F);
-            this.quGridView.StateCommon.HeaderColumn.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.quGridView.StateCommon.HeaderColumn.Border.Width = 0;
-            this.quGridView.StateCommon.HeaderColumn.Content.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.quGridView.StateCommon.HeaderColumn.Content.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.quGridView.StateCommon.HeaderColumn.Content.Hint = ComponentFactory.Krypton.Toolkit.PaletteTextHint.AntiAlias;
-            this.quGridView.TabIndex = 467;
-            // 
-            // qurefreshBTN
-            // 
-            this.qurefreshBTN.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.qurefreshBTN.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.qurefreshBTN.Image = null;
-            this.qurefreshBTN.Location = new System.Drawing.Point(883, 37);
-            this.qurefreshBTN.Name = "qurefreshBTN";
-            this.qurefreshBTN.Size = new System.Drawing.Size(124, 19);
-            this.qurefreshBTN.Style = MetroFramework.MetroColorStyle.Silver;
-            this.qurefreshBTN.TabIndex = 472;
-            this.qurefreshBTN.Text = "Refresh Table";
-            this.qurefreshBTN.UseSelectable = true;
-            this.qurefreshBTN.UseVisualStyleBackColor = true;
-            this.qurefreshBTN.Click += new System.EventHandler(this.qurefreshBTN_Click);
+            this.quaddnewBTN.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.quaddnewBTN.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.quaddnewBTN.Image = null;
+            this.quaddnewBTN.Location = new System.Drawing.Point(753, 37);
+            this.quaddnewBTN.Name = "quaddnewBTN";
+            this.quaddnewBTN.Size = new System.Drawing.Size(124, 19);
+            this.quaddnewBTN.Style = MetroFramework.MetroColorStyle.Silver;
+            this.quaddnewBTN.TabIndex = 473;
+            this.quaddnewBTN.Text = "Add New";
+            this.quaddnewBTN.UseSelectable = true;
+            this.quaddnewBTN.UseVisualStyleBackColor = true;
+            this.quaddnewBTN.Click += new System.EventHandler(this.quaddnewBTN_Click);
             // 
             // Form1
             // 
@@ -1599,12 +1617,12 @@
             this.Panel3.ResumeLayout(false);
             this.Panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.servicingGridView)).EndInit();
-            this.Panel5.ResumeLayout(false);
-            this.Panel5.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.CallLogGrid)).EndInit();
             this.metroTabPage4.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.quGridView)).EndInit();
+            this.Panel5.ResumeLayout(false);
+            this.Panel5.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.CallLogGrid)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1679,6 +1697,7 @@
         private System.Windows.Forms.Panel panel1;
         internal ComponentFactory.Krypton.Toolkit.KryptonDataGridView quGridView;
         internal MetroFramework.Controls.MetroTextBox.MetroTextButton qurefreshBTN;
+        internal MetroFramework.Controls.MetroTextBox.MetroTextButton quaddnewBTN;
     }
 }
 
