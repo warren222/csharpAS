@@ -67,7 +67,7 @@ namespace AfterSalesCSharp
             }
             catch (SqlException e)
             {
-                MetroMessageBox.Show(Form1.ActiveForm, "" + e + "", "Sql Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MetroMessageBox.Show(Form1.ActiveForm, "" + e.Message + "", "Sql Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             finally
             {
@@ -96,7 +96,7 @@ namespace AfterSalesCSharp
             }
             catch (SqlException e)
             {
-                MetroMessageBox.Show(Form1.ActiveForm, "" + e + "", "Sql Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MetroMessageBox.Show(Form1.ActiveForm, "" + e.Message + "", "Sql Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             finally
             {
@@ -225,7 +225,7 @@ namespace AfterSalesCSharp
             }
             catch (SqlException e)
             {
-                MetroMessageBox.Show(Form1.ActiveForm, "" + e + "", "Sql Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MetroMessageBox.Show(Form1.ActiveForm, "" + e.Message + "", "Sql Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             finally
             {
@@ -322,7 +322,7 @@ namespace AfterSalesCSharp
             }
             catch (SqlException e)
             {
-                MetroMessageBox.Show(Form1.ActiveForm, "" + e + "", "Sql Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MetroMessageBox.Show(Form1.ActiveForm, "" + e.Message + "", "Sql Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             finally
             {

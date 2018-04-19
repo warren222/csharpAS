@@ -49,11 +49,12 @@ namespace AfterSalesCSharp
 
         bool firstload = true;
         bool firstloadservicing = true;
-      
+        bool firstloadqu = true;
         private void Form1_Load(object sender, EventArgs e)
         {
             rownumber1.SelectedIndex = 0;
             servicingrownumber.SelectedIndex = 0;
+            qurownumber.SelectedIndex = 0;
         }
 
         private void calldategen_MouseDown(object sender, MouseEventArgs e)
@@ -557,6 +558,18 @@ namespace AfterSalesCSharp
                     firstloadservicing = false;
                 }
             }
+            else if (MetroTabControl1.SelectedIndex == 3)
+            {
+                if (firstloadqu == false)
+                {
+                }
+                else
+                {
+                    quClass q = new quClass(this, quf);
+                    q.loadquotaiontb();
+                    firstloadqu = false;
+                }
+            }
         }
 
         private void servicingGridView_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -664,6 +677,17 @@ namespace AfterSalesCSharp
                 {
                     newQUform qu = new newQUform();
                     qu.aseno.Text = rows.Cells[0].Value.ToString();
+                    qu.qudate.Text = rows.Cells[2].Value.ToString();
+                    qu.projectTXT.Text = rows.Cells[3].Value.ToString();
+                    qu.addressTXT.Text = rows.Cells[4].Value.ToString();
+                    qu.telno.Text = rows.Cells[5].Value.ToString();
+                    qu.faxno.Text = rows.Cells[6].Value.ToString();
+                    qu.preparedby.Text= rows.Cells[7].Value.ToString();
+                    qu.approvedby.Text = rows.Cells[8].Value.ToString();
+                    qu.acceptedby.Text = rows.Cells[9].Value.ToString();
+
+                    quClass q = new quClass(this, qu);
+                    q.loaditems(qu.aseno.Text);
                     qu.aseno.Enabled = false;
                     qu.panel1.Enabled = true;
                     qu.ShowDialog();

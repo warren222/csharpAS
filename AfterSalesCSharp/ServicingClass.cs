@@ -63,7 +63,7 @@ namespace AfterSalesCSharp
             }
             catch (SqlException e)
             {
-                MetroMessageBox.Show(Form1.ActiveForm, "" + e + "", "Sql Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MetroMessageBox.Show(Form1.ActiveForm, "" + e.Message + "", "Sql Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             finally
             {
@@ -187,7 +187,7 @@ namespace AfterSalesCSharp
             }
             catch (SqlException e)
             {
-                MetroMessageBox.Show(newSrevicingFRM.ActiveForm, "" + e + "", "Sql Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MetroMessageBox.Show(newSrevicingFRM.ActiveForm, "" + e.Message + "", "Sql Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             finally
             {
@@ -319,7 +319,7 @@ namespace AfterSalesCSharp
             }
             catch (SqlException e)
             {
-                MetroMessageBox.Show(newSrevicingFRM.ActiveForm, "" + e + "", "Sql Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MetroMessageBox.Show(newSrevicingFRM.ActiveForm, "" + e.Message + "", "Sql Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             finally
             {
@@ -353,7 +353,7 @@ namespace AfterSalesCSharp
             }
             catch (SqlException e)
             {
-                MetroMessageBox.Show(newSrevicingFRM.ActiveForm, "" + e + "", "Sql Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MetroMessageBox.Show(newSrevicingFRM.ActiveForm, "" + e.Message + "", "Sql Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             finally
             {
@@ -415,7 +415,7 @@ namespace AfterSalesCSharp
             }
             catch (SqlException e)
             {
-                MetroMessageBox.Show(newSrevicingFRM.ActiveForm, "" + e + "", "Sql Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MetroMessageBox.Show(newSrevicingFRM.ActiveForm, "" + e.Message + "", "Sql Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
         public void deleteservicingsched(string id, string cin)
@@ -433,7 +433,7 @@ namespace AfterSalesCSharp
             }
             catch (SqlException e)
             {
-                MetroMessageBox.Show(newSrevicingFRM.ActiveForm, "" + e + "", "Sql Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MetroMessageBox.Show(newSrevicingFRM.ActiveForm, "" + e.Message + "", "Sql Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             finally
             {

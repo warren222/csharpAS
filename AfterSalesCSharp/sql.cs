@@ -39,5 +39,10 @@ namespace AfterSalesCSharp
             var headerBounds = new Rectangle(e.RowBounds.Left, e.RowBounds.Top, grid.RowHeadersWidth, e.RowBounds.Height);
             e.Graphics.DrawString(rowIdx, frm1.Font, SystemBrushes.ControlText, headerBounds, centerFormat);
         }
+        public static bool IsNumeric(string val)
+        {
+            double x;
+            return double.TryParse(val, out x);
+        }
     }
 }
