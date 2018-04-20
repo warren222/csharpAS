@@ -161,5 +161,11 @@ namespace AfterSalesCSharp
         {
             timer1.Start();
         }
+
+        private void metroTextButton1_Click(object sender, EventArgs e)
+        {
+            quREPORTfrm qurep = new quREPORTfrm();
+            qurep.ShowDialog();
+        }
     }
 }

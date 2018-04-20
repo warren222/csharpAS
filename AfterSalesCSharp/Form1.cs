@@ -29,7 +29,7 @@ namespace AfterSalesCSharp
 
         //temporary memory
         public static string tempcin { get; set; }
-
+        public static string aseno { get; set; }
 
 
         bool bol = true;
@@ -676,6 +676,7 @@ namespace AfterSalesCSharp
                 if (e.ColumnIndex == 1)
                 {
                     newQUform qu = new newQUform();
+                    aseno= rows.Cells[0].Value.ToString();
                     qu.aseno.Text = rows.Cells[0].Value.ToString();
                     qu.qudate.Text = rows.Cells[2].Value.ToString();
                     qu.projectTXT.Text = rows.Cells[3].Value.ToString();
