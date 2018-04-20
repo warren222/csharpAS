@@ -117,17 +117,6 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="saveBTN.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAPNJREFUOE+d
-        0bFqwlAUgOFQhYIg2k1cioMgLjq6VnDv1qV9CkEqgrsgOAkKri4tiJQ+gDiU4tTBWcFBcFBEaQVL0f94
-        UxrjtSH54SMnIbkhuYaLyoiq0VsjvKjRuRyeMcHSPO5M9zibHy383qwzRwTaGtjiFSXk0cQa1kWecNIN
-        uogdzv66gLxVHlyhhmuclDKP9jKY4hFhueA22bpLNbrrCiE1uku+T75zgaBcsBVAXI3HpdHGN+SH9WAv
-        iz50CxtvsG7VDHUUUcUHfnALbQl8wbqI1Sce8G8FyM0bDDHGABVo996eD+/oHM48lsSdGp0yjD1Auj6y
-        mKc9sAAAAABJRU5ErkJggg==
-</value>
-  </data>
   <data name="textBox1.Text" xml:space="preserve">
     <value>Dear Sir/Madam:
            

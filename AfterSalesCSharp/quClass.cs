@@ -31,7 +31,7 @@ namespace AfterSalesCSharp
             frm1 = frm1val;
             qufrm = qu;
         }
-        public void loadquotaiontb()
+        public void loadquotaiontb(string con)
         {
             try
             {
@@ -40,7 +40,7 @@ namespace AfterSalesCSharp
                 DataSet ds = new DataSet();
                 ds.Clear();
                 BindingSource bs = new BindingSource();
-                string str = "select "+ frm1.rowcounter(frm1.qurownumber.Text) + columns + " from quotationtb";
+                string str = "select "+ frm1.rowcounter(frm1.qurownumber.Text) + columns + " from quotationtb " + con;
                 sqlcmd = new SqlCommand(str, sql.sqlcon);
                 da.SelectCommand = sqlcmd;
                 da.Fill(ds, "quotationtb");

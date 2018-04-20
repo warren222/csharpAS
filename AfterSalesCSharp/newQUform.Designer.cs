@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(newQUform));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.saveBTN = new MetroFramework.Controls.MetroTextBox.MetroTextButton();
             this.itemGRID = new ComponentFactory.Krypton.Toolkit.KryptonDataGridView();
@@ -56,6 +56,7 @@
             this.aseno = new MetroFramework.Controls.MetroTextBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.kryptonLabel10 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.itemGRID)).BeginInit();
             this.panel2.SuspendLayout();
@@ -65,11 +66,12 @@
             // 
             this.panel1.AutoScroll = true;
             this.panel1.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.panel1.Controls.Add(this.kryptonLabel10);
             this.panel1.Controls.Add(this.panel2);
+            this.panel1.Controls.Add(this.acceptedby);
             this.panel1.Controls.Add(this.saveBTN);
             this.panel1.Controls.Add(this.faxno);
             this.panel1.Controls.Add(this.textBox1);
-            this.panel1.Controls.Add(this.acceptedby);
             this.panel1.Controls.Add(this.approvedby);
             this.panel1.Controls.Add(this.preparedby);
             this.panel1.Controls.Add(this.telno);
@@ -78,17 +80,17 @@
             this.panel1.Controls.Add(this.MetroDateTime1);
             this.panel1.Controls.Add(this.qudate);
             this.panel1.Enabled = false;
-            this.panel1.Location = new System.Drawing.Point(9, 63);
+            this.panel1.Location = new System.Drawing.Point(37, 63);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(824, 584);
+            this.panel1.Size = new System.Drawing.Size(1079, 584);
             this.panel1.TabIndex = 0;
             // 
             // saveBTN
             // 
             this.saveBTN.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.saveBTN.Image = ((System.Drawing.Image)(resources.GetObject("saveBTN.Image")));
+            this.saveBTN.Image = null;
             this.saveBTN.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.saveBTN.Location = new System.Drawing.Point(716, 865);
+            this.saveBTN.Location = new System.Drawing.Point(982, 802);
             this.saveBTN.Name = "saveBTN";
             this.saveBTN.Size = new System.Drawing.Size(74, 29);
             this.saveBTN.Style = MetroFramework.MetroColorStyle.Red;
@@ -105,13 +107,13 @@
             this.itemGRID.AllowUserToOrderColumns = true;
             this.itemGRID.AllowUserToResizeColumns = false;
             this.itemGRID.AllowUserToResizeRows = false;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.WhiteSmoke;
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
-            this.itemGRID.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.WhiteSmoke;
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            this.itemGRID.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.itemGRID.ColumnHeadersHeight = 30;
             this.itemGRID.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.itemGRID.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.itemGRID.Location = new System.Drawing.Point(11, 102);
+            this.itemGRID.Location = new System.Drawing.Point(279, 0);
             this.itemGRID.Name = "itemGRID";
             this.itemGRID.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Office2010Silver;
             this.itemGRID.ReadOnly = true;
@@ -119,7 +121,7 @@
             this.itemGRID.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.Color.Black;
             this.itemGRID.RowTemplate.Height = 27;
             this.itemGRID.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.itemGRID.Size = new System.Drawing.Size(774, 366);
+            this.itemGRID.Size = new System.Drawing.Size(774, 323);
             this.itemGRID.StateCommon.Background.Color1 = System.Drawing.Color.White;
             this.itemGRID.StateCommon.BackStyle = ComponentFactory.Krypton.Toolkit.PaletteBackStyle.GridBackgroundList;
             this.itemGRID.StateCommon.DataCell.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
@@ -141,7 +143,7 @@
             this.addBTN.Cursor = System.Windows.Forms.Cursors.Hand;
             this.addBTN.Image = null;
             this.addBTN.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.addBTN.Location = new System.Drawing.Point(711, 68);
+            this.addBTN.Location = new System.Drawing.Point(35, 284);
             this.addBTN.Name = "addBTN";
             this.addBTN.Size = new System.Drawing.Size(74, 28);
             this.addBTN.Style = MetroFramework.MetroColorStyle.Silver;
@@ -158,7 +160,7 @@
             this.deleteBTN.Cursor = System.Windows.Forms.Cursors.Hand;
             this.deleteBTN.Image = null;
             this.deleteBTN.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.deleteBTN.Location = new System.Drawing.Point(551, 68);
+            this.deleteBTN.Location = new System.Drawing.Point(183, 284);
             this.deleteBTN.Name = "deleteBTN";
             this.deleteBTN.Size = new System.Drawing.Size(74, 28);
             this.deleteBTN.Style = MetroFramework.MetroColorStyle.Silver;
@@ -175,7 +177,7 @@
             this.updateBTN.Cursor = System.Windows.Forms.Cursors.Hand;
             this.updateBTN.Image = null;
             this.updateBTN.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.updateBTN.Location = new System.Drawing.Point(631, 68);
+            this.updateBTN.Location = new System.Drawing.Point(109, 284);
             this.updateBTN.Name = "updateBTN";
             this.updateBTN.Size = new System.Drawing.Size(74, 28);
             this.updateBTN.Style = MetroFramework.MetroColorStyle.Silver;
@@ -192,7 +194,7 @@
             // 
             // 
             this.netamount.CustomButton.Image = null;
-            this.netamount.CustomButton.Location = new System.Drawing.Point(163, 2);
+            this.netamount.CustomButton.Location = new System.Drawing.Point(190, 2);
             this.netamount.CustomButton.Name = "";
             this.netamount.CustomButton.Size = new System.Drawing.Size(23, 23);
             this.netamount.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
@@ -204,7 +206,7 @@
             this.netamount.Enabled = false;
             this.netamount.FontSize = MetroFramework.MetroTextBoxSize.Medium;
             this.netamount.Lines = new string[0];
-            this.netamount.Location = new System.Drawing.Point(277, 68);
+            this.netamount.Location = new System.Drawing.Point(13, 225);
             this.netamount.MaxLength = 32767;
             this.netamount.Multiline = true;
             this.netamount.Name = "netamount";
@@ -214,7 +216,7 @@
             this.netamount.SelectionLength = 0;
             this.netamount.SelectionStart = 0;
             this.netamount.ShowClearButton = true;
-            this.netamount.Size = new System.Drawing.Size(189, 28);
+            this.netamount.Size = new System.Drawing.Size(216, 28);
             this.netamount.Style = MetroFramework.MetroColorStyle.Red;
             this.netamount.TabIndex = 46;
             this.netamount.UseCustomForeColor = true;
@@ -230,7 +232,7 @@
             // 
             // 
             this.qty.CustomButton.Image = null;
-            this.qty.CustomButton.Location = new System.Drawing.Point(52, 2);
+            this.qty.CustomButton.Location = new System.Drawing.Point(190, 2);
             this.qty.CustomButton.Name = "";
             this.qty.CustomButton.Size = new System.Drawing.Size(23, 23);
             this.qty.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
@@ -241,7 +243,7 @@
             this.qty.DisplayIcon = true;
             this.qty.FontSize = MetroFramework.MetroTextBoxSize.Medium;
             this.qty.Lines = new string[0];
-            this.qty.Location = new System.Drawing.Point(193, 68);
+            this.qty.Location = new System.Drawing.Point(13, 191);
             this.qty.MaxLength = 32767;
             this.qty.Multiline = true;
             this.qty.Name = "qty";
@@ -251,7 +253,7 @@
             this.qty.SelectionLength = 0;
             this.qty.SelectionStart = 0;
             this.qty.ShowClearButton = true;
-            this.qty.Size = new System.Drawing.Size(78, 28);
+            this.qty.Size = new System.Drawing.Size(216, 28);
             this.qty.Style = MetroFramework.MetroColorStyle.Red;
             this.qty.TabIndex = 45;
             this.qty.UseCustomForeColor = true;
@@ -267,7 +269,7 @@
             // 
             // 
             this.unitprice.CustomButton.Image = null;
-            this.unitprice.CustomButton.Location = new System.Drawing.Point(150, 2);
+            this.unitprice.CustomButton.Location = new System.Drawing.Point(191, 2);
             this.unitprice.CustomButton.Name = "";
             this.unitprice.CustomButton.Size = new System.Drawing.Size(23, 23);
             this.unitprice.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
@@ -278,7 +280,7 @@
             this.unitprice.DisplayIcon = true;
             this.unitprice.FontSize = MetroFramework.MetroTextBoxSize.Medium;
             this.unitprice.Lines = new string[0];
-            this.unitprice.Location = new System.Drawing.Point(11, 68);
+            this.unitprice.Location = new System.Drawing.Point(12, 157);
             this.unitprice.MaxLength = 32767;
             this.unitprice.Multiline = true;
             this.unitprice.Name = "unitprice";
@@ -288,7 +290,7 @@
             this.unitprice.SelectionLength = 0;
             this.unitprice.SelectionStart = 0;
             this.unitprice.ShowClearButton = true;
-            this.unitprice.Size = new System.Drawing.Size(176, 28);
+            this.unitprice.Size = new System.Drawing.Size(217, 28);
             this.unitprice.Style = MetroFramework.MetroColorStyle.Red;
             this.unitprice.TabIndex = 44;
             this.unitprice.UseCustomForeColor = true;
@@ -304,9 +306,9 @@
             // 
             // 
             this.parts.CustomButton.Image = null;
-            this.parts.CustomButton.Location = new System.Drawing.Point(409, 2);
+            this.parts.CustomButton.Location = new System.Drawing.Point(234, 2);
             this.parts.CustomButton.Name = "";
-            this.parts.CustomButton.Size = new System.Drawing.Size(23, 23);
+            this.parts.CustomButton.Size = new System.Drawing.Size(25, 25);
             this.parts.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
             this.parts.CustomButton.TabIndex = 1;
             this.parts.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
@@ -315,7 +317,7 @@
             this.parts.DisplayIcon = true;
             this.parts.FontSize = MetroFramework.MetroTextBoxSize.Medium;
             this.parts.Lines = new string[0];
-            this.parts.Location = new System.Drawing.Point(350, 16);
+            this.parts.Location = new System.Drawing.Point(11, 84);
             this.parts.MaxLength = 32767;
             this.parts.Multiline = true;
             this.parts.Name = "parts";
@@ -325,7 +327,7 @@
             this.parts.SelectionLength = 0;
             this.parts.SelectionStart = 0;
             this.parts.ShowClearButton = true;
-            this.parts.Size = new System.Drawing.Size(435, 28);
+            this.parts.Size = new System.Drawing.Size(262, 30);
             this.parts.Style = MetroFramework.MetroColorStyle.Red;
             this.parts.TabIndex = 43;
             this.parts.UseCustomForeColor = true;
@@ -340,7 +342,7 @@
             // 
             // 
             this.wdwloc.CustomButton.Image = null;
-            this.wdwloc.CustomButton.Location = new System.Drawing.Point(222, 2);
+            this.wdwloc.CustomButton.Location = new System.Drawing.Point(236, 2);
             this.wdwloc.CustomButton.Name = "";
             this.wdwloc.CustomButton.Size = new System.Drawing.Size(23, 23);
             this.wdwloc.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
@@ -351,7 +353,7 @@
             this.wdwloc.DisplayIcon = true;
             this.wdwloc.FontSize = MetroFramework.MetroTextBoxSize.Medium;
             this.wdwloc.Lines = new string[0];
-            this.wdwloc.Location = new System.Drawing.Point(96, 16);
+            this.wdwloc.Location = new System.Drawing.Point(11, 50);
             this.wdwloc.MaxLength = 32767;
             this.wdwloc.Multiline = true;
             this.wdwloc.Name = "wdwloc";
@@ -361,7 +363,7 @@
             this.wdwloc.SelectionLength = 0;
             this.wdwloc.SelectionStart = 0;
             this.wdwloc.ShowClearButton = true;
-            this.wdwloc.Size = new System.Drawing.Size(248, 28);
+            this.wdwloc.Size = new System.Drawing.Size(262, 28);
             this.wdwloc.Style = MetroFramework.MetroColorStyle.Red;
             this.wdwloc.TabIndex = 42;
             this.wdwloc.UseCustomForeColor = true;
@@ -376,7 +378,7 @@
             // 
             // 
             this.itemno.CustomButton.Image = null;
-            this.itemno.CustomButton.Location = new System.Drawing.Point(53, 2);
+            this.itemno.CustomButton.Location = new System.Drawing.Point(191, 2);
             this.itemno.CustomButton.Name = "";
             this.itemno.CustomButton.Size = new System.Drawing.Size(23, 23);
             this.itemno.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
@@ -397,7 +399,7 @@
             this.itemno.SelectionLength = 0;
             this.itemno.SelectionStart = 0;
             this.itemno.ShowClearButton = true;
-            this.itemno.Size = new System.Drawing.Size(79, 28);
+            this.itemno.Size = new System.Drawing.Size(217, 28);
             this.itemno.Style = MetroFramework.MetroColorStyle.Red;
             this.itemno.TabIndex = 41;
             this.itemno.UseCustomForeColor = true;
@@ -412,7 +414,7 @@
             // 
             // 
             this.faxno.CustomButton.Image = null;
-            this.faxno.CustomButton.Location = new System.Drawing.Point(163, 2);
+            this.faxno.CustomButton.Location = new System.Drawing.Point(216, 2);
             this.faxno.CustomButton.Name = "";
             this.faxno.CustomButton.Size = new System.Drawing.Size(23, 23);
             this.faxno.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
@@ -423,7 +425,7 @@
             this.faxno.DisplayIcon = true;
             this.faxno.FontSize = MetroFramework.MetroTextBoxSize.Medium;
             this.faxno.Lines = new string[0];
-            this.faxno.Location = new System.Drawing.Point(599, 88);
+            this.faxno.Location = new System.Drawing.Point(814, 149);
             this.faxno.MaxLength = 32767;
             this.faxno.Multiline = true;
             this.faxno.Name = "faxno";
@@ -433,7 +435,7 @@
             this.faxno.SelectionLength = 0;
             this.faxno.SelectionStart = 0;
             this.faxno.ShowClearButton = true;
-            this.faxno.Size = new System.Drawing.Size(189, 28);
+            this.faxno.Size = new System.Drawing.Size(242, 28);
             this.faxno.Style = MetroFramework.MetroColorStyle.Red;
             this.faxno.TabIndex = 40;
             this.faxno.UseCustomForeColor = true;
@@ -444,12 +446,14 @@
             // 
             // textBox1
             // 
+            this.textBox1.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox1.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.textBox1.Location = new System.Drawing.Point(14, 130);
+            this.textBox1.Location = new System.Drawing.Point(14, 191);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(774, 144);
+            this.textBox1.Size = new System.Drawing.Size(1032, 125);
             this.textBox1.TabIndex = 39;
             this.textBox1.Text = resources.GetString("textBox1.Text");
             // 
@@ -459,7 +463,7 @@
             // 
             // 
             this.acceptedby.CustomButton.Image = null;
-            this.acceptedby.CustomButton.Location = new System.Drawing.Point(163, 2);
+            this.acceptedby.CustomButton.Location = new System.Drawing.Point(368, 2);
             this.acceptedby.CustomButton.Name = "";
             this.acceptedby.CustomButton.Size = new System.Drawing.Size(23, 23);
             this.acceptedby.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
@@ -470,7 +474,7 @@
             this.acceptedby.DisplayIcon = true;
             this.acceptedby.FontSize = MetroFramework.MetroTextBoxSize.Medium;
             this.acceptedby.Lines = new string[0];
-            this.acceptedby.Location = new System.Drawing.Point(408, 865);
+            this.acceptedby.Location = new System.Drawing.Point(16, 766);
             this.acceptedby.MaxLength = 32767;
             this.acceptedby.Multiline = true;
             this.acceptedby.Name = "acceptedby";
@@ -480,7 +484,7 @@
             this.acceptedby.SelectionLength = 0;
             this.acceptedby.SelectionStart = 0;
             this.acceptedby.ShowClearButton = true;
-            this.acceptedby.Size = new System.Drawing.Size(189, 28);
+            this.acceptedby.Size = new System.Drawing.Size(394, 28);
             this.acceptedby.Style = MetroFramework.MetroColorStyle.Red;
             this.acceptedby.TabIndex = 38;
             this.acceptedby.UseCustomForeColor = true;
@@ -495,7 +499,7 @@
             // 
             // 
             this.approvedby.CustomButton.Image = null;
-            this.approvedby.CustomButton.Location = new System.Drawing.Point(163, 2);
+            this.approvedby.CustomButton.Location = new System.Drawing.Point(368, 2);
             this.approvedby.CustomButton.Name = "";
             this.approvedby.CustomButton.Size = new System.Drawing.Size(23, 23);
             this.approvedby.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
@@ -506,7 +510,7 @@
             this.approvedby.DisplayIcon = true;
             this.approvedby.FontSize = MetroFramework.MetroTextBoxSize.Medium;
             this.approvedby.Lines = new string[0];
-            this.approvedby.Location = new System.Drawing.Point(213, 865);
+            this.approvedby.Location = new System.Drawing.Point(16, 732);
             this.approvedby.MaxLength = 32767;
             this.approvedby.Multiline = true;
             this.approvedby.Name = "approvedby";
@@ -516,7 +520,7 @@
             this.approvedby.SelectionLength = 0;
             this.approvedby.SelectionStart = 0;
             this.approvedby.ShowClearButton = true;
-            this.approvedby.Size = new System.Drawing.Size(189, 28);
+            this.approvedby.Size = new System.Drawing.Size(394, 28);
             this.approvedby.Style = MetroFramework.MetroColorStyle.Red;
             this.approvedby.TabIndex = 37;
             this.approvedby.UseCustomForeColor = true;
@@ -531,7 +535,7 @@
             // 
             // 
             this.preparedby.CustomButton.Image = null;
-            this.preparedby.CustomButton.Location = new System.Drawing.Point(163, 2);
+            this.preparedby.CustomButton.Location = new System.Drawing.Point(368, 2);
             this.preparedby.CustomButton.Name = "";
             this.preparedby.CustomButton.Size = new System.Drawing.Size(23, 23);
             this.preparedby.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
@@ -542,7 +546,7 @@
             this.preparedby.DisplayIcon = true;
             this.preparedby.FontSize = MetroFramework.MetroTextBoxSize.Medium;
             this.preparedby.Lines = new string[0];
-            this.preparedby.Location = new System.Drawing.Point(18, 865);
+            this.preparedby.Location = new System.Drawing.Point(16, 698);
             this.preparedby.MaxLength = 32767;
             this.preparedby.Multiline = true;
             this.preparedby.Name = "preparedby";
@@ -552,7 +556,7 @@
             this.preparedby.SelectionLength = 0;
             this.preparedby.SelectionStart = 0;
             this.preparedby.ShowClearButton = true;
-            this.preparedby.Size = new System.Drawing.Size(189, 28);
+            this.preparedby.Size = new System.Drawing.Size(394, 28);
             this.preparedby.Style = MetroFramework.MetroColorStyle.Red;
             this.preparedby.TabIndex = 36;
             this.preparedby.UseCustomForeColor = true;
@@ -567,7 +571,7 @@
             // 
             // 
             this.telno.CustomButton.Image = null;
-            this.telno.CustomButton.Location = new System.Drawing.Point(163, 2);
+            this.telno.CustomButton.Location = new System.Drawing.Point(216, 2);
             this.telno.CustomButton.Name = "";
             this.telno.CustomButton.Size = new System.Drawing.Size(23, 23);
             this.telno.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
@@ -578,7 +582,7 @@
             this.telno.DisplayIcon = true;
             this.telno.FontSize = MetroFramework.MetroTextBoxSize.Medium;
             this.telno.Lines = new string[0];
-            this.telno.Location = new System.Drawing.Point(599, 54);
+            this.telno.Location = new System.Drawing.Point(814, 115);
             this.telno.MaxLength = 32767;
             this.telno.Multiline = true;
             this.telno.Name = "telno";
@@ -588,7 +592,7 @@
             this.telno.SelectionLength = 0;
             this.telno.SelectionStart = 0;
             this.telno.ShowClearButton = true;
-            this.telno.Size = new System.Drawing.Size(189, 28);
+            this.telno.Size = new System.Drawing.Size(242, 28);
             this.telno.Style = MetroFramework.MetroColorStyle.Red;
             this.telno.TabIndex = 34;
             this.telno.UseCustomForeColor = true;
@@ -614,7 +618,7 @@
             this.addressTXT.DisplayIcon = true;
             this.addressTXT.FontSize = MetroFramework.MetroTextBoxSize.Medium;
             this.addressTXT.Lines = new string[0];
-            this.addressTXT.Location = new System.Drawing.Point(14, 88);
+            this.addressTXT.Location = new System.Drawing.Point(14, 149);
             this.addressTXT.MaxLength = 32767;
             this.addressTXT.Name = "addressTXT";
             this.addressTXT.PasswordChar = '\0';
@@ -650,7 +654,7 @@
             this.projectTXT.FontSize = MetroFramework.MetroTextBoxSize.Medium;
             this.projectTXT.ForeColor = System.Drawing.SystemColors.ControlText;
             this.projectTXT.Lines = new string[0];
-            this.projectTXT.Location = new System.Drawing.Point(14, 54);
+            this.projectTXT.Location = new System.Drawing.Point(14, 115);
             this.projectTXT.MaxLength = 32767;
             this.projectTXT.Name = "projectTXT";
             this.projectTXT.PasswordChar = '\0';
@@ -672,7 +676,7 @@
             // 
             this.MetroDateTime1.CustomFormat = "yyyy-MMM-dd";
             this.MetroDateTime1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.MetroDateTime1.Location = new System.Drawing.Point(14, 15);
+            this.MetroDateTime1.Location = new System.Drawing.Point(14, 76);
             this.MetroDateTime1.MinimumSize = new System.Drawing.Size(0, 29);
             this.MetroDateTime1.Name = "MetroDateTime1";
             this.MetroDateTime1.Size = new System.Drawing.Size(126, 29);
@@ -698,7 +702,7 @@
             this.qudate.DisplayIcon = true;
             this.qudate.FontSize = MetroFramework.MetroTextBoxSize.Medium;
             this.qudate.Lines = new string[0];
-            this.qudate.Location = new System.Drawing.Point(146, 16);
+            this.qudate.Location = new System.Drawing.Point(146, 77);
             this.qudate.MaxLength = 32767;
             this.qudate.Multiline = true;
             this.qudate.Name = "qudate";
@@ -733,7 +737,7 @@
             this.aseno.DisplayIcon = true;
             this.aseno.FontSize = MetroFramework.MetroTextBoxSize.Medium;
             this.aseno.Lines = new string[0];
-            this.aseno.Location = new System.Drawing.Point(610, 29);
+            this.aseno.Location = new System.Drawing.Point(907, 29);
             this.aseno.MaxLength = 32767;
             this.aseno.Multiline = true;
             this.aseno.Name = "aseno";
@@ -767,20 +771,31 @@
             this.panel2.Controls.Add(this.qty);
             this.panel2.Controls.Add(this.updateBTN);
             this.panel2.Controls.Add(this.netamount);
-            this.panel2.Location = new System.Drawing.Point(3, 300);
+            this.panel2.Location = new System.Drawing.Point(3, 331);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(801, 482);
+            this.panel2.Size = new System.Drawing.Size(1056, 323);
             this.panel2.TabIndex = 488;
             // 
             // timer1
             // 
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
+            // kryptonLabel10
+            // 
+            this.kryptonLabel10.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.kryptonLabel10.Location = new System.Drawing.Point(15, 17);
+            this.kryptonLabel10.Name = "kryptonLabel10";
+            this.kryptonLabel10.Size = new System.Drawing.Size(471, 34);
+            this.kryptonLabel10.StateCommon.ShortText.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.kryptonLabel10.StateCommon.ShortText.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kryptonLabel10.TabIndex = 489;
+            this.kryptonLabel10.Values.Text = "PROPOSED AFTER SALES SERVICE QUOTATION";
+            // 
             // newQUform
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(841, 670);
+            this.ClientSize = new System.Drawing.Size(1139, 670);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.aseno);
             this.MaximizeBox = false;
@@ -821,5 +836,6 @@
         public MetroFramework.Controls.MetroTextBox faxno;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Timer timer1;
+        internal ComponentFactory.Krypton.Toolkit.KryptonLabel kryptonLabel10;
     }
 }

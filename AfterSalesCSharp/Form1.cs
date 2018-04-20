@@ -566,7 +566,7 @@ namespace AfterSalesCSharp
                 else
                 {
                     quClass q = new quClass(this, quf);
-                    q.loadquotaiontb();
+                    q.loadquotaiontb("");
                     firstloadqu = false;
                 }
             }
@@ -659,7 +659,7 @@ namespace AfterSalesCSharp
         private void qurefreshBTN_Click(object sender, EventArgs e)
         {
             quClass q = new quClass(this,quf);
-            q.loadquotaiontb();
+            q.loadquotaiontb("");
         }
 
         private void quaddnewBTN_Click(object sender, EventArgs e)
@@ -693,6 +693,20 @@ namespace AfterSalesCSharp
                     qu.ShowDialog();
                 }
             }
+        }
+
+        private void quGridView_RowPostPaint(object sender, DataGridViewRowPostPaintEventArgs e)
+        {
+            sql s = new sql(this);
+            s.autorow(sender, e);
+        }
+
+        private void quSearch_ButtonClick(object sender, EventArgs e)
+        {
+            quSearch.Text = quSearch.Text.Replace("'", "`");
+            quSearch.Text = quSearch.Text.Replace("\"", "``");
+            quClass q = new quClass(this, quf);
+            q.loadquotaiontb(" where project like '%" + quSearch.Text + "%'");
         }
     }
 }
