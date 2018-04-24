@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using MetroFramework.Forms;
 using MetroFramework;
+using Microsoft.Reporting.WinForms;
 
 namespace AfterSalesCSharp
 {
@@ -164,7 +165,10 @@ namespace AfterSalesCSharp
 
         private void metroTextButton1_Click(object sender, EventArgs e)
         {
+
             quREPORTfrm qurep = new quREPORTfrm();
+            ReportParameter param1 = new ReportParameter("messagetxt", textBox1.Text);
+            qurep.reportViewer1.LocalReport.SetParameters(param1);
             qurep.ShowDialog();
         }
     }

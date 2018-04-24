@@ -31,14 +31,29 @@
             this.components = new System.ComponentModel.Container();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource2 = new Microsoft.Reporting.WinForms.ReportDataSource();
-            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
-            this.asDS = new AfterSalesCSharp.asDS();
             this.QUOTATIONTBBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.asDS = new AfterSalesCSharp.asDS();
             this.ITEMSTBBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            ((System.ComponentModel.ISupportInitialize)(this.asDS)).BeginInit();
+            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             ((System.ComponentModel.ISupportInitialize)(this.QUOTATIONTBBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.asDS)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ITEMSTBBindingSource)).BeginInit();
             this.SuspendLayout();
+            // 
+            // QUOTATIONTBBindingSource
+            // 
+            this.QUOTATIONTBBindingSource.DataMember = "QUOTATIONTB";
+            this.QUOTATIONTBBindingSource.DataSource = this.asDS;
+            // 
+            // asDS
+            // 
+            this.asDS.DataSetName = "asDS";
+            this.asDS.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // ITEMSTBBindingSource
+            // 
+            this.ITEMSTBBindingSource.DataMember = "ITEMSTB";
+            this.ITEMSTBBindingSource.DataSource = this.asDS;
             // 
             // reportViewer1
             // 
@@ -55,21 +70,6 @@
             this.reportViewer1.Size = new System.Drawing.Size(596, 479);
             this.reportViewer1.TabIndex = 0;
             // 
-            // asDS
-            // 
-            this.asDS.DataSetName = "asDS";
-            this.asDS.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // QUOTATIONTBBindingSource
-            // 
-            this.QUOTATIONTBBindingSource.DataMember = "QUOTATIONTB";
-            this.QUOTATIONTBBindingSource.DataSource = this.asDS;
-            // 
-            // ITEMSTBBindingSource
-            // 
-            this.ITEMSTBBindingSource.DataMember = "ITEMSTB";
-            this.ITEMSTBBindingSource.DataSource = this.asDS;
-            // 
             // quREPORTfrm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -80,18 +80,17 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "quREPORTfrm";
             this.Load += new System.EventHandler(this.quREPORTfrm_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.asDS)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.QUOTATIONTBBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.asDS)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ITEMSTBBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
         private System.Windows.Forms.BindingSource QUOTATIONTBBindingSource;
         private asDS asDS;
         private System.Windows.Forms.BindingSource ITEMSTBBindingSource;
+        public Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
     }
 }

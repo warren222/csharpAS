@@ -823,7 +823,7 @@ namespace AfterSalesCSharp {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public ITEMSTBRow AddITEMSTBRow(string ID, string ASENO, string ITEMNO, string WDWLOC, string PARTS, string UNITPRICE, string QTY, string NETPRICE) {
+            public ITEMSTBRow AddITEMSTBRow(string ID, string ASENO, string ITEMNO, string WDWLOC, string PARTS, decimal UNITPRICE, decimal QTY, decimal NETPRICE) {
                 ITEMSTBRow rowITEMSTBRow = ((ITEMSTBRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         ID,
@@ -879,11 +879,11 @@ namespace AfterSalesCSharp {
                 base.Columns.Add(this.columnWDWLOC);
                 this.columnPARTS = new global::System.Data.DataColumn("PARTS", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnPARTS);
-                this.columnUNITPRICE = new global::System.Data.DataColumn("UNITPRICE", typeof(string), null, global::System.Data.MappingType.Element);
+                this.columnUNITPRICE = new global::System.Data.DataColumn("UNITPRICE", typeof(decimal), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnUNITPRICE);
-                this.columnQTY = new global::System.Data.DataColumn("QTY", typeof(string), null, global::System.Data.MappingType.Element);
+                this.columnQTY = new global::System.Data.DataColumn("QTY", typeof(decimal), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnQTY);
-                this.columnNETPRICE = new global::System.Data.DataColumn("NETPRICE", typeof(string), null, global::System.Data.MappingType.Element);
+                this.columnNETPRICE = new global::System.Data.DataColumn("NETPRICE", typeof(decimal), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnNETPRICE);
             }
             
@@ -1374,10 +1374,10 @@ namespace AfterSalesCSharp {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string UNITPRICE {
+            public decimal UNITPRICE {
                 get {
                     try {
-                        return ((string)(this[this.tableITEMSTB.UNITPRICEColumn]));
+                        return ((decimal)(this[this.tableITEMSTB.UNITPRICEColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("The value for column \'UNITPRICE\' in table \'ITEMSTB\' is DBNull.", e);
@@ -1390,10 +1390,10 @@ namespace AfterSalesCSharp {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string QTY {
+            public decimal QTY {
                 get {
                     try {
-                        return ((string)(this[this.tableITEMSTB.QTYColumn]));
+                        return ((decimal)(this[this.tableITEMSTB.QTYColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("The value for column \'QTY\' in table \'ITEMSTB\' is DBNull.", e);
@@ -1406,10 +1406,10 @@ namespace AfterSalesCSharp {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string NETPRICE {
+            public decimal NETPRICE {
                 get {
                     try {
-                        return ((string)(this[this.tableITEMSTB.NETPRICEColumn]));
+                        return ((decimal)(this[this.tableITEMSTB.NETPRICEColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("The value for column \'NETPRICE\' in table \'ITEMSTB\' is DBNull.", e);
