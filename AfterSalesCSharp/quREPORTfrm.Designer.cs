@@ -65,9 +65,9 @@
             this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
             this.reportViewer1.LocalReport.DataSources.Add(reportDataSource2);
             this.reportViewer1.LocalReport.ReportEmbeddedResource = "AfterSalesCSharp.quREPORT.rdlc";
-            this.reportViewer1.Location = new System.Drawing.Point(0, 0);
+            this.reportViewer1.Location = new System.Drawing.Point(20, 60);
             this.reportViewer1.Name = "reportViewer1";
-            this.reportViewer1.Size = new System.Drawing.Size(596, 479);
+            this.reportViewer1.Size = new System.Drawing.Size(556, 399);
             this.reportViewer1.TabIndex = 0;
             // 
             // quREPORTfrm
@@ -77,8 +77,7 @@
             this.ClientSize = new System.Drawing.Size(596, 479);
             this.Controls.Add(this.reportViewer1);
             this.Name = "quREPORTfrm";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "quREPORTfrm";
+            this.Style = MetroFramework.MetroColorStyle.Red;
             this.Load += new System.EventHandler(this.quREPORTfrm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.QUOTATIONTBBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.asDS)).EndInit();

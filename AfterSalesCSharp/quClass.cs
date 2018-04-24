@@ -23,6 +23,7 @@ namespace AfterSalesCSharp
                         ",ADDRESS" +
                         ",TELNO" +
                         ",FAXNO" +
+                        ",OTHERCHARGES" +
                         ",PREPAREDBY AS [PREPARED BY]" +
                         ",APPROVEDBY AS [APPROVED BY]" +
                         ",ACCEPTEDBY AS [ACCEPTED BY]";
@@ -76,6 +77,7 @@ namespace AfterSalesCSharp
             frm1.quGridView.Columns["ADDRESS"].AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells;
             frm1.quGridView.Columns["TELNO"].AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells;
             frm1.quGridView.Columns["FAXNO"].AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells;
+            frm1.quGridView.Columns["OTHERCHARGES"].Visible = false;
             frm1.quGridView.Columns["PREPARED BY"].AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells;
             frm1.quGridView.Columns["APPROVED BY"].AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells;
             frm1.quGridView.Columns["ACCEPTED BY"].AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells;
@@ -114,18 +116,24 @@ namespace AfterSalesCSharp
         }
         public void savequotation(string ase, string qdate, string project,
                                   string address, string telno,
-                                  string faxno, string prepared,
+                                  string faxno,string othercharges , string prepared,
                                   string approved, string accepted)
         {
             try
             {
                 sql.sqlcon.Open();
+                if (othercharges == "")
+                {
+                    othercharges = "0";
+                }
+            
                 string str = "update quotationtb set " +
                                 "QDATE ='" + qdate + "'" +
                                 ",PROJECT ='" + project + "'" +
                                 ",ADDRESS ='" + address + "'" +
                                 ",TELNO ='" + telno + "'" +
                                 ",FAXNO ='" + faxno + "'" +
+                                ",OTHERCHARGES ='" + othercharges + "'" +
                                 ",PREPAREDBY ='" + prepared + "'" +
                                 ",APPROVEDBY ='" + approved + "'" +
                                 ",ACCEPTEDBY ='" + accepted + "'" +

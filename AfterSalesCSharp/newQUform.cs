@@ -35,7 +35,7 @@ namespace AfterSalesCSharp
            cleanentry();
             quClass q = new quClass(frm1,this);
             q.savequotation(aseno.Text,qudate.Text,projectTXT.Text,
-                            addressTXT.Text,telno.Text,faxno.Text,
+                            addressTXT.Text,telno.Text,faxno.Text,othercharges.Text,
                             preparedby.Text,approvedby.Text,acceptedby.Text);
         }
         public void cleanentry()
@@ -165,11 +165,21 @@ namespace AfterSalesCSharp
 
         private void metroTextButton1_Click(object sender, EventArgs e)
         {
-
             quREPORTfrm qurep = new quREPORTfrm();
             ReportParameter param1 = new ReportParameter("messagetxt", textBox1.Text);
+            ReportParameter param2 = new ReportParameter("scopeofworks", scopeofworks.Text);
             qurep.reportViewer1.LocalReport.SetParameters(param1);
+            qurep.reportViewer1.LocalReport.SetParameters(param2);
             qurep.ShowDialog();
+        }
+
+        private void othercharges_Leave(object sender, EventArgs e)
+        {
+            if (sql.IsNumeric(othercharges.Text) == false)
+            {
+                MetroMessageBox.Show(this, "Invalid Other Charges", "Numeric Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                othercharges.Focus();
+            }
         }
     }
 }

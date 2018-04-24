@@ -10,10 +10,11 @@ using System.Windows.Forms;
 using Microsoft.Reporting.WinForms;
 using System.Data.SqlClient;
 using MetroFramework;
+using MetroFramework.Forms;
 
 namespace AfterSalesCSharp
 {
-    public partial class quREPORTfrm : Form
+    public partial class quREPORTfrm : MetroForm
     {
         SqlCommand sqlcmd = new SqlCommand();
         SqlDataAdapter da = new SqlDataAdapter();

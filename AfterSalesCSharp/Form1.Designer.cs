@@ -138,7 +138,7 @@
             this.MetroTabControl1.Controls.Add(this.metroTabPage4);
             this.MetroTabControl1.Location = new System.Drawing.Point(15, 60);
             this.MetroTabControl1.Name = "MetroTabControl1";
-            this.MetroTabControl1.SelectedIndex = 1;
+            this.MetroTabControl1.SelectedIndex = 0;
             this.MetroTabControl1.Size = new System.Drawing.Size(1024, 638);
             this.MetroTabControl1.SizeMode = System.Windows.Forms.TabSizeMode.FillToRight;
             this.MetroTabControl1.Style = MetroFramework.MetroColorStyle.Red;
@@ -340,7 +340,7 @@
             this.CLEARSEARCHRESULTbtn.Image = null;
             this.CLEARSEARCHRESULTbtn.Location = new System.Drawing.Point(471, 415);
             this.CLEARSEARCHRESULTbtn.Name = "CLEARSEARCHRESULTbtn";
-            this.CLEARSEARCHRESULTbtn.Size = new System.Drawing.Size(387, 23);
+            this.CLEARSEARCHRESULTbtn.Size = new System.Drawing.Size(370, 23);
             this.CLEARSEARCHRESULTbtn.Style = MetroFramework.MetroColorStyle.Silver;
             this.CLEARSEARCHRESULTbtn.TabIndex = 473;
             this.CLEARSEARCHRESULTbtn.Text = "clear search result";
@@ -352,7 +352,7 @@
             // searchresultLBL
             // 
             this.searchresultLBL.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.searchresultLBL.Location = new System.Drawing.Point(539, 115);
+            this.searchresultLBL.Location = new System.Drawing.Point(522, 115);
             this.searchresultLBL.Name = "searchresultLBL";
             this.searchresultLBL.Size = new System.Drawing.Size(132, 24);
             this.searchresultLBL.StateCommon.ShortText.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
@@ -384,7 +384,7 @@
             this.searchResultGridview.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.Color.Black;
             this.searchResultGridview.RowTemplate.Height = 27;
             this.searchResultGridview.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.searchResultGridview.Size = new System.Drawing.Size(387, 260);
+            this.searchResultGridview.Size = new System.Drawing.Size(370, 260);
             this.searchResultGridview.StateCommon.Background.Color1 = System.Drawing.Color.White;
             this.searchResultGridview.StateCommon.BackStyle = ComponentFactory.Krypton.Toolkit.PaletteBackStyle.GridBackgroundList;
             this.searchResultGridview.StateCommon.DataCell.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 

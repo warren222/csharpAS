@@ -683,10 +683,10 @@ namespace AfterSalesCSharp
                     qu.addressTXT.Text = rows.Cells[4].Value.ToString();
                     qu.telno.Text = rows.Cells[5].Value.ToString();
                     qu.faxno.Text = rows.Cells[6].Value.ToString();
-                    qu.preparedby.Text= rows.Cells[7].Value.ToString();
-                    qu.approvedby.Text = rows.Cells[8].Value.ToString();
-                    qu.acceptedby.Text = rows.Cells[9].Value.ToString();
-
+                    qu.othercharges.Text = rows.Cells[7].Value.ToString();
+                    qu.preparedby.Text= rows.Cells[8].Value.ToString();
+                    qu.approvedby.Text = rows.Cells[9].Value.ToString();
+                    qu.acceptedby.Text = rows.Cells[10].Value.ToString();
                     quClass q = new quClass(this, qu);
                     q.loaditems(qu.aseno.Text);
                     qu.aseno.Enabled = false;
