@@ -12,8 +12,7 @@ using System.Drawing;
 namespace AfterSalesCSharp
 {
     class CallinTableClass
-    {
-       
+    {  
 
         Form1 frm1;
         public CallinTableClass(Form1 frm1val)

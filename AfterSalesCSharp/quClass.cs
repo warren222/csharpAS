@@ -25,8 +25,7 @@ namespace AfterSalesCSharp
                         ",FAXNO" +
                         ",OTHERCHARGES" +
                         ",PREPAREDBY AS [PREPARED BY]" +
-                        ",APPROVEDBY AS [APPROVED BY]" +
-                        ",ACCEPTEDBY AS [ACCEPTED BY]";
+                        ",APPROVEDBY AS [APPROVED BY]";
         public quClass(Form1 frm1val, newQUform qu)
         {
             frm1 = frm1val;
@@ -80,7 +79,6 @@ namespace AfterSalesCSharp
             frm1.quGridView.Columns["OTHERCHARGES"].Visible = false;
             frm1.quGridView.Columns["PREPARED BY"].AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells;
             frm1.quGridView.Columns["APPROVED BY"].AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells;
-            frm1.quGridView.Columns["ACCEPTED BY"].AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells;
         }
         public void addase(string ASE)
         {
@@ -117,7 +115,7 @@ namespace AfterSalesCSharp
         public void savequotation(string ase, string qdate, string project,
                                   string address, string telno,
                                   string faxno,string othercharges , string prepared,
-                                  string approved, string accepted)
+                                  string approved)
         {
             try
             {
@@ -136,7 +134,6 @@ namespace AfterSalesCSharp
                                 ",OTHERCHARGES ='" + othercharges + "'" +
                                 ",PREPAREDBY ='" + prepared + "'" +
                                 ",APPROVEDBY ='" + approved + "'" +
-                                ",ACCEPTEDBY ='" + accepted + "'" +
                                 " where aseno = '" + ase + "'";
                 sqlcmd = new SqlCommand(str, sql.sqlcon);
                 sqlcmd.ExecuteNonQuery();
@@ -159,7 +156,7 @@ namespace AfterSalesCSharp
                 DataSet ds = new DataSet();
                 ds.Clear();
                 BindingSource bs = new BindingSource();
-                string columns = "ID" +
+                string columns ="ID" +
                                 ",ASENO" +
                                 ",ITEMNO as ITEM" +
                                 ",WDWLOC as [WINDOW / DOOR LOCATION]" +

@@ -36,7 +36,7 @@ namespace AfterSalesCSharp
             quClass q = new quClass(frm1,this);
             q.savequotation(aseno.Text,qudate.Text,projectTXT.Text,
                             addressTXT.Text,telno.Text,faxno.Text,othercharges.Text,
-                            preparedby.Text,approvedby.Text,acceptedby.Text);
+                            preparedby.Text,approvedby.Text);
         }
         public void cleanentry()
         {
@@ -54,8 +54,7 @@ namespace AfterSalesCSharp
             preparedby.Text = preparedby.Text.Replace("\"", "``").Trim();
             approvedby.Text = approvedby.Text.Replace("'", "`").Trim();
             approvedby.Text = approvedby.Text.Replace("\"", "``").Trim();
-            acceptedby.Text = acceptedby.Text.Replace("'", "`").Trim();
-            acceptedby.Text = acceptedby.Text.Replace("\"", "``").Trim();
+         
         }
 
         private void MetroDateTime1_ValueChanged(object sender, EventArgs e)
@@ -168,8 +167,11 @@ namespace AfterSalesCSharp
             quREPORTfrm qurep = new quREPORTfrm();
             ReportParameter param1 = new ReportParameter("messagetxt", textBox1.Text);
             ReportParameter param2 = new ReportParameter("scopeofworks", scopeofworks.Text);
+            ReportParameter param3 = new ReportParameter("note", note.Text);
+
             qurep.reportViewer1.LocalReport.SetParameters(param1);
             qurep.reportViewer1.LocalReport.SetParameters(param2);
+            qurep.reportViewer1.LocalReport.SetParameters(param3);
             qurep.ShowDialog();
         }
 

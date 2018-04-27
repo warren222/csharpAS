@@ -332,6 +332,8 @@ namespace AfterSalesCSharp {
             
             private global::System.Data.DataColumn columnACCEPTEDBY;
             
+            private global::System.Data.DataColumn columnOTHERCHARGES;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public QUOTATIONTBDataTable() {
@@ -439,6 +441,14 @@ namespace AfterSalesCSharp {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn OTHERCHARGESColumn {
+                get {
+                    return this.columnOTHERCHARGES;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -474,7 +484,7 @@ namespace AfterSalesCSharp {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public QUOTATIONTBRow AddQUOTATIONTBRow(string ASENO, string QDATE, string PROJECT, string ADDRESS, string TELNO, string FAXNO, string PREPAREDBY, string APPROVEDBY, string ACCEPTEDBY) {
+            public QUOTATIONTBRow AddQUOTATIONTBRow(string ASENO, string QDATE, string PROJECT, string ADDRESS, string TELNO, string FAXNO, string PREPAREDBY, string APPROVEDBY, string ACCEPTEDBY, decimal OTHERCHARGES) {
                 QUOTATIONTBRow rowQUOTATIONTBRow = ((QUOTATIONTBRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         ASENO,
@@ -485,7 +495,8 @@ namespace AfterSalesCSharp {
                         FAXNO,
                         PREPAREDBY,
                         APPROVEDBY,
-                        ACCEPTEDBY};
+                        ACCEPTEDBY,
+                        OTHERCHARGES};
                 rowQUOTATIONTBRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowQUOTATIONTBRow);
                 return rowQUOTATIONTBRow;
@@ -517,6 +528,7 @@ namespace AfterSalesCSharp {
                 this.columnPREPAREDBY = base.Columns["PREPAREDBY"];
                 this.columnAPPROVEDBY = base.Columns["APPROVEDBY"];
                 this.columnACCEPTEDBY = base.Columns["ACCEPTEDBY"];
+                this.columnOTHERCHARGES = base.Columns["OTHERCHARGES"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -540,6 +552,8 @@ namespace AfterSalesCSharp {
                 base.Columns.Add(this.columnAPPROVEDBY);
                 this.columnACCEPTEDBY = new global::System.Data.DataColumn("ACCEPTEDBY", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnACCEPTEDBY);
+                this.columnOTHERCHARGES = new global::System.Data.DataColumn("OTHERCHARGES", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnOTHERCHARGES);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1171,6 +1185,22 @@ namespace AfterSalesCSharp {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public decimal OTHERCHARGES {
+                get {
+                    try {
+                        return ((decimal)(this[this.tableQUOTATIONTB.OTHERCHARGESColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'OTHERCHARGES\' in table \'QUOTATIONTB\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableQUOTATIONTB.OTHERCHARGESColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsASENONull() {
                 return this.IsNull(this.tableQUOTATIONTB.ASENOColumn);
             }
@@ -1275,6 +1305,18 @@ namespace AfterSalesCSharp {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetACCEPTEDBYNull() {
                 this[this.tableQUOTATIONTB.ACCEPTEDBYColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsOTHERCHARGESNull() {
+                return this.IsNull(this.tableQUOTATIONTB.OTHERCHARGESColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetOTHERCHARGESNull() {
+                this[this.tableQUOTATIONTB.OTHERCHARGESColumn] = global::System.Convert.DBNull;
             }
         }
         

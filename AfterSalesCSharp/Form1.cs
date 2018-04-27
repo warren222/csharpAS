@@ -686,7 +686,7 @@ namespace AfterSalesCSharp
                     qu.othercharges.Text = rows.Cells[7].Value.ToString();
                     qu.preparedby.Text= rows.Cells[8].Value.ToString();
                     qu.approvedby.Text = rows.Cells[9].Value.ToString();
-                    qu.acceptedby.Text = rows.Cells[10].Value.ToString();
+             
                     quClass q = new quClass(this, qu);
                     q.loaditems(qu.aseno.Text);
                     qu.aseno.Enabled = false;
