@@ -29,9 +29,14 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(newQUform));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.note = new MetroFramework.Controls.MetroTextBox();
+            this.othercharges = new MetroFramework.Controls.MetroTextBox();
+            this.kryptonLabel2 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
+            this.kryptonLabel1 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
+            this.scopeofworks = new MetroFramework.Controls.MetroTextBox();
             this.kryptonLabel10 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.itemno = new MetroFramework.Controls.MetroTextBox();
@@ -57,11 +62,9 @@
             this.aseno = new MetroFramework.Controls.MetroTextBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.metroTextButton1 = new MetroFramework.Controls.MetroTextBox.MetroTextButton();
-            this.scopeofworks = new MetroFramework.Controls.MetroTextBox();
-            this.kryptonLabel1 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
-            this.kryptonLabel2 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
-            this.othercharges = new MetroFramework.Controls.MetroTextBox();
-            this.note = new MetroFramework.Controls.MetroTextBox();
+            this.kryptonLabel4 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
+            this.kryptonLabel5 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
+            this.kryptonLabel3 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.itemGRID)).BeginInit();
@@ -94,6 +97,145 @@
             this.panel1.Size = new System.Drawing.Size(1079, 584);
             this.panel1.TabIndex = 0;
             // 
+            // note
+            // 
+            // 
+            // 
+            // 
+            this.note.CustomButton.Image = null;
+            this.note.CustomButton.Location = new System.Drawing.Point(1014, 2);
+            this.note.CustomButton.Name = "";
+            this.note.CustomButton.Size = new System.Drawing.Size(23, 23);
+            this.note.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.note.CustomButton.TabIndex = 1;
+            this.note.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.note.CustomButton.UseSelectable = true;
+            this.note.CustomButton.Visible = false;
+            this.note.DisplayIcon = true;
+            this.note.FontSize = MetroFramework.MetroTextBoxSize.Medium;
+            this.note.ForeColor = System.Drawing.Color.Gray;
+            this.note.Lines = new string[] {
+        "For any question, please feel free to call us at our office telephone nos. 715-87" +
+            "77, 912-4333, 913-2542 or 913-2524 or fax no. 912-1892."};
+            this.note.Location = new System.Drawing.Point(16, 685);
+            this.note.MaxLength = 32767;
+            this.note.Multiline = true;
+            this.note.Name = "note";
+            this.note.PasswordChar = '\0';
+            this.note.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.note.SelectedText = "";
+            this.note.SelectionLength = 0;
+            this.note.SelectionStart = 0;
+            this.note.Size = new System.Drawing.Size(1040, 28);
+            this.note.Style = MetroFramework.MetroColorStyle.Red;
+            this.note.TabIndex = 494;
+            this.note.Text = "For any question, please feel free to call us at our office telephone nos. 715-87" +
+    "77, 912-4333, 913-2542 or 913-2524 or fax no. 912-1892.";
+            this.note.UseCustomForeColor = true;
+            this.note.UseSelectable = true;
+            this.note.WaterMark = "Remarks / Note";
+            this.note.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.note.WaterMarkFont = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            // 
+            // othercharges
+            // 
+            // 
+            // 
+            // 
+            this.othercharges.CustomButton.Image = null;
+            this.othercharges.CustomButton.Location = new System.Drawing.Point(189, 2);
+            this.othercharges.CustomButton.Name = "";
+            this.othercharges.CustomButton.Size = new System.Drawing.Size(23, 23);
+            this.othercharges.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.othercharges.CustomButton.TabIndex = 1;
+            this.othercharges.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.othercharges.CustomButton.UseSelectable = true;
+            this.othercharges.CustomButton.Visible = false;
+            this.othercharges.DisplayIcon = true;
+            this.othercharges.FontSize = MetroFramework.MetroTextBoxSize.Medium;
+            this.othercharges.Lines = new string[0];
+            this.othercharges.Location = new System.Drawing.Point(16, 809);
+            this.othercharges.MaxLength = 32767;
+            this.othercharges.Multiline = true;
+            this.othercharges.Name = "othercharges";
+            this.othercharges.PasswordChar = '\0';
+            this.othercharges.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.othercharges.SelectedText = "";
+            this.othercharges.SelectionLength = 0;
+            this.othercharges.SelectionStart = 0;
+            this.othercharges.ShowClearButton = true;
+            this.othercharges.Size = new System.Drawing.Size(215, 28);
+            this.othercharges.Style = MetroFramework.MetroColorStyle.Red;
+            this.othercharges.TabIndex = 493;
+            this.othercharges.UseCustomForeColor = true;
+            this.othercharges.UseSelectable = true;
+            this.othercharges.WaterMark = "Other Charges";
+            this.othercharges.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.othercharges.WaterMarkFont = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.othercharges.Leave += new System.EventHandler(this.othercharges_Leave);
+            // 
+            // kryptonLabel2
+            // 
+            this.kryptonLabel2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.kryptonLabel2.Location = new System.Drawing.Point(16, 781);
+            this.kryptonLabel2.Name = "kryptonLabel2";
+            this.kryptonLabel2.Size = new System.Drawing.Size(118, 22);
+            this.kryptonLabel2.StateCommon.ShortText.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.kryptonLabel2.StateCommon.ShortText.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kryptonLabel2.TabIndex = 492;
+            this.kryptonLabel2.Values.Text = "OTHER CHARGES:";
+            // 
+            // kryptonLabel1
+            // 
+            this.kryptonLabel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.kryptonLabel1.Location = new System.Drawing.Point(15, 719);
+            this.kryptonLabel1.Name = "kryptonLabel1";
+            this.kryptonLabel1.Size = new System.Drawing.Size(116, 22);
+            this.kryptonLabel1.StateCommon.ShortText.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.kryptonLabel1.StateCommon.ShortText.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kryptonLabel1.TabIndex = 491;
+            this.kryptonLabel1.Values.Text = "Scope Of Work(s):";
+            // 
+            // scopeofworks
+            // 
+            // 
+            // 
+            // 
+            this.scopeofworks.CustomButton.Image = null;
+            this.scopeofworks.CustomButton.Location = new System.Drawing.Point(1014, 2);
+            this.scopeofworks.CustomButton.Name = "";
+            this.scopeofworks.CustomButton.Size = new System.Drawing.Size(23, 23);
+            this.scopeofworks.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.scopeofworks.CustomButton.TabIndex = 1;
+            this.scopeofworks.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.scopeofworks.CustomButton.UseSelectable = true;
+            this.scopeofworks.CustomButton.Visible = false;
+            this.scopeofworks.DisplayIcon = true;
+            this.scopeofworks.FontSize = MetroFramework.MetroTextBoxSize.Medium;
+            this.scopeofworks.ForeColor = System.Drawing.Color.Gray;
+            this.scopeofworks.Lines = new string[] {
+        "Labor Cost - Php 600/day/person x 2 for 1 day (Php 1,200.00 Labor Cost - FREE of " +
+            "CHARGE)"};
+            this.scopeofworks.Location = new System.Drawing.Point(15, 747);
+            this.scopeofworks.MaxLength = 32767;
+            this.scopeofworks.Multiline = true;
+            this.scopeofworks.Name = "scopeofworks";
+            this.scopeofworks.PasswordChar = '\0';
+            this.scopeofworks.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.scopeofworks.SelectedText = "";
+            this.scopeofworks.SelectionLength = 0;
+            this.scopeofworks.SelectionStart = 0;
+            this.scopeofworks.Size = new System.Drawing.Size(1040, 28);
+            this.scopeofworks.Style = MetroFramework.MetroColorStyle.Red;
+            this.scopeofworks.TabIndex = 490;
+            this.scopeofworks.Text = "Labor Cost - Php 600/day/person x 2 for 1 day (Php 1,200.00 Labor Cost - FREE of " +
+    "CHARGE)";
+            this.scopeofworks.UseCustomForeColor = true;
+            this.scopeofworks.UseSelectable = true;
+            this.scopeofworks.WaterMark = "SCOPE OF WORK(S):";
+            this.scopeofworks.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.scopeofworks.WaterMarkFont = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            // 
             // kryptonLabel10
             // 
             this.kryptonLabel10.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -108,6 +250,9 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.Gainsboro;
+            this.panel2.Controls.Add(this.kryptonLabel3);
+            this.panel2.Controls.Add(this.kryptonLabel5);
+            this.panel2.Controls.Add(this.kryptonLabel4);
             this.panel2.Controls.Add(this.itemno);
             this.panel2.Controls.Add(this.wdwloc);
             this.panel2.Controls.Add(this.itemGRID);
@@ -202,9 +347,9 @@
             this.itemGRID.AllowUserToOrderColumns = true;
             this.itemGRID.AllowUserToResizeColumns = false;
             this.itemGRID.AllowUserToResizeRows = false;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.WhiteSmoke;
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
-            this.itemGRID.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.WhiteSmoke;
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            this.itemGRID.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.itemGRID.ColumnHeadersHeight = 30;
             this.itemGRID.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.itemGRID.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -291,7 +436,7 @@
             // 
             // 
             this.unitprice.CustomButton.Image = null;
-            this.unitprice.CustomButton.Location = new System.Drawing.Point(191, 2);
+            this.unitprice.CustomButton.Location = new System.Drawing.Point(138, 2);
             this.unitprice.CustomButton.Name = "";
             this.unitprice.CustomButton.Size = new System.Drawing.Size(23, 23);
             this.unitprice.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
@@ -302,7 +447,7 @@
             this.unitprice.DisplayIcon = true;
             this.unitprice.FontSize = MetroFramework.MetroTextBoxSize.Medium;
             this.unitprice.Lines = new string[0];
-            this.unitprice.Location = new System.Drawing.Point(12, 157);
+            this.unitprice.Location = new System.Drawing.Point(109, 155);
             this.unitprice.MaxLength = 32767;
             this.unitprice.Multiline = true;
             this.unitprice.Name = "unitprice";
@@ -312,7 +457,7 @@
             this.unitprice.SelectionLength = 0;
             this.unitprice.SelectionStart = 0;
             this.unitprice.ShowClearButton = true;
-            this.unitprice.Size = new System.Drawing.Size(217, 28);
+            this.unitprice.Size = new System.Drawing.Size(164, 28);
             this.unitprice.Style = MetroFramework.MetroColorStyle.Red;
             this.unitprice.TabIndex = 44;
             this.unitprice.UseCustomForeColor = true;
@@ -345,7 +490,7 @@
             // 
             // 
             this.qty.CustomButton.Image = null;
-            this.qty.CustomButton.Location = new System.Drawing.Point(190, 2);
+            this.qty.CustomButton.Location = new System.Drawing.Point(137, 2);
             this.qty.CustomButton.Name = "";
             this.qty.CustomButton.Size = new System.Drawing.Size(23, 23);
             this.qty.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
@@ -356,7 +501,7 @@
             this.qty.DisplayIcon = true;
             this.qty.FontSize = MetroFramework.MetroTextBoxSize.Medium;
             this.qty.Lines = new string[0];
-            this.qty.Location = new System.Drawing.Point(13, 191);
+            this.qty.Location = new System.Drawing.Point(110, 189);
             this.qty.MaxLength = 32767;
             this.qty.Multiline = true;
             this.qty.Name = "qty";
@@ -366,7 +511,7 @@
             this.qty.SelectionLength = 0;
             this.qty.SelectionStart = 0;
             this.qty.ShowClearButton = true;
-            this.qty.Size = new System.Drawing.Size(216, 28);
+            this.qty.Size = new System.Drawing.Size(163, 28);
             this.qty.Style = MetroFramework.MetroColorStyle.Red;
             this.qty.TabIndex = 45;
             this.qty.UseCustomForeColor = true;
@@ -399,7 +544,7 @@
             // 
             // 
             this.netamount.CustomButton.Image = null;
-            this.netamount.CustomButton.Location = new System.Drawing.Point(190, 2);
+            this.netamount.CustomButton.Location = new System.Drawing.Point(137, 2);
             this.netamount.CustomButton.Name = "";
             this.netamount.CustomButton.Size = new System.Drawing.Size(23, 23);
             this.netamount.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
@@ -411,7 +556,7 @@
             this.netamount.Enabled = false;
             this.netamount.FontSize = MetroFramework.MetroTextBoxSize.Medium;
             this.netamount.Lines = new string[0];
-            this.netamount.Location = new System.Drawing.Point(13, 225);
+            this.netamount.Location = new System.Drawing.Point(110, 223);
             this.netamount.MaxLength = 32767;
             this.netamount.Multiline = true;
             this.netamount.Name = "netamount";
@@ -421,7 +566,7 @@
             this.netamount.SelectionLength = 0;
             this.netamount.SelectionStart = 0;
             this.netamount.ShowClearButton = true;
-            this.netamount.Size = new System.Drawing.Size(216, 28);
+            this.netamount.Size = new System.Drawing.Size(163, 28);
             this.netamount.Style = MetroFramework.MetroColorStyle.Red;
             this.netamount.TabIndex = 46;
             this.netamount.UseCustomForeColor = true;
@@ -779,144 +924,38 @@
             this.metroTextButton1.UseVisualStyleBackColor = true;
             this.metroTextButton1.Click += new System.EventHandler(this.metroTextButton1_Click);
             // 
-            // scopeofworks
+            // kryptonLabel4
             // 
+            this.kryptonLabel4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.kryptonLabel4.Location = new System.Drawing.Point(11, 189);
+            this.kryptonLabel4.Name = "kryptonLabel4";
+            this.kryptonLabel4.Size = new System.Drawing.Size(35, 22);
+            this.kryptonLabel4.StateCommon.ShortText.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.kryptonLabel4.StateCommon.ShortText.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kryptonLabel4.TabIndex = 493;
+            this.kryptonLabel4.Values.Text = "Qty:";
             // 
+            // kryptonLabel5
             // 
+            this.kryptonLabel5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.kryptonLabel5.Location = new System.Drawing.Point(11, 223);
+            this.kryptonLabel5.Name = "kryptonLabel5";
+            this.kryptonLabel5.Size = new System.Drawing.Size(87, 22);
+            this.kryptonLabel5.StateCommon.ShortText.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.kryptonLabel5.StateCommon.ShortText.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kryptonLabel5.TabIndex = 494;
+            this.kryptonLabel5.Values.Text = "Net Amount:";
             // 
-            this.scopeofworks.CustomButton.Image = null;
-            this.scopeofworks.CustomButton.Location = new System.Drawing.Point(1014, 2);
-            this.scopeofworks.CustomButton.Name = "";
-            this.scopeofworks.CustomButton.Size = new System.Drawing.Size(23, 23);
-            this.scopeofworks.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.scopeofworks.CustomButton.TabIndex = 1;
-            this.scopeofworks.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.scopeofworks.CustomButton.UseSelectable = true;
-            this.scopeofworks.CustomButton.Visible = false;
-            this.scopeofworks.DisplayIcon = true;
-            this.scopeofworks.FontSize = MetroFramework.MetroTextBoxSize.Medium;
-            this.scopeofworks.ForeColor = System.Drawing.Color.Gray;
-            this.scopeofworks.Lines = new string[] {
-        "Labor Cost - Php 600/day/person x 2 for 1 day (Php 1,200.00 Labor Cost - FREE of " +
-            "CHARGE)"};
-            this.scopeofworks.Location = new System.Drawing.Point(15, 747);
-            this.scopeofworks.MaxLength = 32767;
-            this.scopeofworks.Multiline = true;
-            this.scopeofworks.Name = "scopeofworks";
-            this.scopeofworks.PasswordChar = '\0';
-            this.scopeofworks.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.scopeofworks.SelectedText = "";
-            this.scopeofworks.SelectionLength = 0;
-            this.scopeofworks.SelectionStart = 0;
-            this.scopeofworks.Size = new System.Drawing.Size(1040, 28);
-            this.scopeofworks.Style = MetroFramework.MetroColorStyle.Red;
-            this.scopeofworks.TabIndex = 490;
-            this.scopeofworks.Text = "Labor Cost - Php 600/day/person x 2 for 1 day (Php 1,200.00 Labor Cost - FREE of " +
-    "CHARGE)";
-            this.scopeofworks.UseCustomForeColor = true;
-            this.scopeofworks.UseSelectable = true;
-            this.scopeofworks.WaterMark = "SCOPE OF WORK(S):";
-            this.scopeofworks.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.scopeofworks.WaterMarkFont = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            // kryptonLabel3
             // 
-            // kryptonLabel1
-            // 
-            this.kryptonLabel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.kryptonLabel1.Location = new System.Drawing.Point(15, 719);
-            this.kryptonLabel1.Name = "kryptonLabel1";
-            this.kryptonLabel1.Size = new System.Drawing.Size(116, 22);
-            this.kryptonLabel1.StateCommon.ShortText.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.kryptonLabel1.StateCommon.ShortText.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.kryptonLabel1.TabIndex = 491;
-            this.kryptonLabel1.Values.Text = "Scope Of Work(s):";
-            // 
-            // kryptonLabel2
-            // 
-            this.kryptonLabel2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.kryptonLabel2.Location = new System.Drawing.Point(16, 781);
-            this.kryptonLabel2.Name = "kryptonLabel2";
-            this.kryptonLabel2.Size = new System.Drawing.Size(118, 22);
-            this.kryptonLabel2.StateCommon.ShortText.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.kryptonLabel2.StateCommon.ShortText.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.kryptonLabel2.TabIndex = 492;
-            this.kryptonLabel2.Values.Text = "OTHER CHARGES:";
-            // 
-            // othercharges
-            // 
-            // 
-            // 
-            // 
-            this.othercharges.CustomButton.Image = null;
-            this.othercharges.CustomButton.Location = new System.Drawing.Point(189, 2);
-            this.othercharges.CustomButton.Name = "";
-            this.othercharges.CustomButton.Size = new System.Drawing.Size(23, 23);
-            this.othercharges.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.othercharges.CustomButton.TabIndex = 1;
-            this.othercharges.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.othercharges.CustomButton.UseSelectable = true;
-            this.othercharges.CustomButton.Visible = false;
-            this.othercharges.DisplayIcon = true;
-            this.othercharges.FontSize = MetroFramework.MetroTextBoxSize.Medium;
-            this.othercharges.Lines = new string[0];
-            this.othercharges.Location = new System.Drawing.Point(16, 809);
-            this.othercharges.MaxLength = 32767;
-            this.othercharges.Multiline = true;
-            this.othercharges.Name = "othercharges";
-            this.othercharges.PasswordChar = '\0';
-            this.othercharges.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.othercharges.SelectedText = "";
-            this.othercharges.SelectionLength = 0;
-            this.othercharges.SelectionStart = 0;
-            this.othercharges.ShowClearButton = true;
-            this.othercharges.Size = new System.Drawing.Size(215, 28);
-            this.othercharges.Style = MetroFramework.MetroColorStyle.Red;
-            this.othercharges.TabIndex = 493;
-            this.othercharges.UseCustomForeColor = true;
-            this.othercharges.UseSelectable = true;
-            this.othercharges.WaterMark = "Other Charges";
-            this.othercharges.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.othercharges.WaterMarkFont = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
-            this.othercharges.Leave += new System.EventHandler(this.othercharges_Leave);
-            // 
-            // note
-            // 
-            // 
-            // 
-            // 
-            this.note.CustomButton.Image = null;
-            this.note.CustomButton.Location = new System.Drawing.Point(1014, 2);
-            this.note.CustomButton.Name = "";
-            this.note.CustomButton.Size = new System.Drawing.Size(23, 23);
-            this.note.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.note.CustomButton.TabIndex = 1;
-            this.note.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.note.CustomButton.UseSelectable = true;
-            this.note.CustomButton.Visible = false;
-            this.note.DisplayIcon = true;
-            this.note.FontSize = MetroFramework.MetroTextBoxSize.Medium;
-            this.note.ForeColor = System.Drawing.Color.Gray;
-            this.note.Lines = new string[] {
-        "For any question, please feel free to call us at our office telephone nos. 715-87" +
-            "77, 912-4333, 913-2542 or 913-2524 or fax no. 912-1892."};
-            this.note.Location = new System.Drawing.Point(16, 685);
-            this.note.MaxLength = 32767;
-            this.note.Multiline = true;
-            this.note.Name = "note";
-            this.note.PasswordChar = '\0';
-            this.note.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.note.SelectedText = "";
-            this.note.SelectionLength = 0;
-            this.note.SelectionStart = 0;
-            this.note.Size = new System.Drawing.Size(1040, 28);
-            this.note.Style = MetroFramework.MetroColorStyle.Red;
-            this.note.TabIndex = 494;
-            this.note.Text = "For any question, please feel free to call us at our office telephone nos. 715-87" +
-    "77, 912-4333, 913-2542 or 913-2524 or fax no. 912-1892.";
-            this.note.UseCustomForeColor = true;
-            this.note.UseSelectable = true;
-            this.note.WaterMark = "Remarks / Note";
-            this.note.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.note.WaterMarkFont = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.kryptonLabel3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.kryptonLabel3.Location = new System.Drawing.Point(13, 155);
+            this.kryptonLabel3.Name = "kryptonLabel3";
+            this.kryptonLabel3.Size = new System.Drawing.Size(72, 22);
+            this.kryptonLabel3.StateCommon.ShortText.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.kryptonLabel3.StateCommon.ShortText.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kryptonLabel3.TabIndex = 495;
+            this.kryptonLabel3.Values.Text = "Unit Price:";
             // 
             // newQUform
             // 
@@ -934,6 +973,7 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.itemGRID)).EndInit();
             this.ResumeLayout(false);
 
@@ -971,5 +1011,8 @@
         public MetroFramework.Controls.MetroTextBox othercharges;
         internal ComponentFactory.Krypton.Toolkit.KryptonLabel kryptonLabel2;
         public MetroFramework.Controls.MetroTextBox note;
+        internal ComponentFactory.Krypton.Toolkit.KryptonLabel kryptonLabel3;
+        internal ComponentFactory.Krypton.Toolkit.KryptonLabel kryptonLabel5;
+        internal ComponentFactory.Krypton.Toolkit.KryptonLabel kryptonLabel4;
     }
 }

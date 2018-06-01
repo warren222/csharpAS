@@ -54,7 +54,6 @@ namespace AfterSalesCSharp
             preparedby.Text = preparedby.Text.Replace("\"", "``").Trim();
             approvedby.Text = approvedby.Text.Replace("'", "`").Trim();
             approvedby.Text = approvedby.Text.Replace("\"", "``").Trim();
-         
         }
 
         private void MetroDateTime1_ValueChanged(object sender, EventArgs e)
@@ -93,7 +92,6 @@ namespace AfterSalesCSharp
                 netamount.Focus();
             }
         }
-
         private void addBTN_Click(object sender, EventArgs e)
         {
             cleanitementry();
