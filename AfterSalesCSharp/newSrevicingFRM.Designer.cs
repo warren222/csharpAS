@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(newSrevicingFRM));
             this.Panel1 = new System.Windows.Forms.Panel();
             this.servicingGRID = new ComponentFactory.Krypton.Toolkit.KryptonDataGridView();
@@ -47,8 +47,8 @@
             this.forquotationTXT = new MetroFramework.Controls.MetroTextBox();
             this.servicingdate = new MetroFramework.Controls.MetroTextBox();
             this.cancelBTN = new MetroFramework.Controls.MetroTextBox.MetroTextButton();
-            this.updateBTN = new MetroFramework.Controls.MetroTextBox.MetroTextButton();
             this.addBTN = new MetroFramework.Controls.MetroTextBox.MetroTextButton();
+            this.updateBTN = new MetroFramework.Controls.MetroTextBox.MetroTextButton();
             this.Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.servicingGRID)).BeginInit();
             this.Panel4.SuspendLayout();
@@ -56,6 +56,9 @@
             // 
             // Panel1
             // 
+            this.Panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.Panel1.AutoScroll = true;
             this.Panel1.BackColor = System.Drawing.Color.White;
             this.Panel1.Controls.Add(this.servicingGRID);
@@ -76,9 +79,9 @@
             this.servicingGRID.AllowUserToOrderColumns = true;
             this.servicingGRID.AllowUserToResizeColumns = false;
             this.servicingGRID.AllowUserToResizeRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.WhiteSmoke;
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
-            this.servicingGRID.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.WhiteSmoke;
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
+            this.servicingGRID.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle2;
             this.servicingGRID.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
@@ -112,6 +115,7 @@
             // 
             // deleteBTN
             // 
+            this.deleteBTN.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.deleteBTN.Cursor = System.Windows.Forms.Cursors.Hand;
             this.deleteBTN.Image = ((System.Drawing.Image)(resources.GetObject("deleteBTN.Image")));
             this.deleteBTN.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -128,6 +132,8 @@
             // 
             // Panel4
             // 
+            this.Panel4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.Panel4.AutoScroll = true;
             this.Panel4.BackColor = System.Drawing.Color.WhiteSmoke;
             this.Panel4.Controls.Add(this.KryptonLabel1);
@@ -452,6 +458,7 @@
             // 
             // cancelBTN
             // 
+            this.cancelBTN.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.cancelBTN.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cancelBTN.Image = ((System.Drawing.Image)(resources.GetObject("cancelBTN.Image")));
             this.cancelBTN.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -466,8 +473,25 @@
             this.cancelBTN.Visible = false;
             this.cancelBTN.Click += new System.EventHandler(this.cancelBTN_Click);
             // 
+            // addBTN
+            // 
+            this.addBTN.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.addBTN.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.addBTN.Image = ((System.Drawing.Image)(resources.GetObject("addBTN.Image")));
+            this.addBTN.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.addBTN.Location = new System.Drawing.Point(261, 459);
+            this.addBTN.Name = "addBTN";
+            this.addBTN.Size = new System.Drawing.Size(83, 29);
+            this.addBTN.Style = MetroFramework.MetroColorStyle.Red;
+            this.addBTN.TabIndex = 14;
+            this.addBTN.Text = "Add";
+            this.addBTN.UseSelectable = true;
+            this.addBTN.UseVisualStyleBackColor = true;
+            this.addBTN.Click += new System.EventHandler(this.addBTN_Click);
+            // 
             // updateBTN
             // 
+            this.updateBTN.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.updateBTN.Cursor = System.Windows.Forms.Cursors.Hand;
             this.updateBTN.Image = ((System.Drawing.Image)(resources.GetObject("updateBTN.Image")));
             this.updateBTN.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -482,28 +506,12 @@
             this.updateBTN.Visible = false;
             this.updateBTN.Click += new System.EventHandler(this.updateBTN_Click);
             // 
-            // addBTN
-            // 
-            this.addBTN.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.addBTN.Image = ((System.Drawing.Image)(resources.GetObject("addBTN.Image")));
-            this.addBTN.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.addBTN.Location = new System.Drawing.Point(261, 459);
-            this.addBTN.Name = "addBTN";
-            this.addBTN.Size = new System.Drawing.Size(83, 29);
-            this.addBTN.Style = MetroFramework.MetroColorStyle.Red;
-            this.addBTN.TabIndex = 14;
-            this.addBTN.Text = "Add";
-            this.addBTN.UseSelectable = true;
-            this.addBTN.UseVisualStyleBackColor = true;
-            this.addBTN.Click += new System.EventHandler(this.addBTN_Click);
-            // 
             // newSrevicingFRM
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1164, 582);
             this.Controls.Add(this.Panel1);
-            this.MaximizeBox = false;
             this.Name = "newSrevicingFRM";
             this.Style = MetroFramework.MetroColorStyle.Red;
             this.Text = "newSrevicingFRM";

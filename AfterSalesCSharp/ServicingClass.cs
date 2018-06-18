@@ -126,6 +126,8 @@ namespace AfterSalesCSharp
                 {
                     frm1.servicingGridView.Rows[i].Cells["DONE"].Style.ForeColor = Color.White;
                     frm1.servicingGridView.Rows[i].Cells["DONE"].Style.BackColor = Color.Blue;
+                    frm1.servicingGridView.Rows[i].Cells["DONE"].Style.SelectionForeColor = Color.White;
+                    frm1.servicingGridView.Rows[i].Cells["DONE"].Style.SelectionBackColor = Color.Blue;
                     frm1.servicingGridView.Rows[i].Cells["DONE"].Style.Font = new Font("Century Gothic", 9, FontStyle.Bold);
                 }
             }
@@ -242,6 +244,8 @@ namespace AfterSalesCSharp
                 {
                     nsf.servicingGRID.Rows[i].Cells["DONE"].Style.ForeColor = Color.White;
                     nsf.servicingGRID.Rows[i].Cells["DONE"].Style.BackColor = Color.Blue;
+                    nsf.servicingGRID.Rows[i].Cells["DONE"].Style.SelectionForeColor = Color.White;
+                    nsf.servicingGRID.Rows[i].Cells["DONE"].Style.SelectionBackColor = Color.Blue;
                     nsf.servicingGRID.Rows[i].Cells["DONE"].Style.Font = new Font("Century Gothic", 9, FontStyle.Bold);
                 }
             }
