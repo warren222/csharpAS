@@ -285,7 +285,6 @@ namespace AfterSalesCSharp
             {
                 sql.sqlcon.Close();
             }
-
         }
     }
 }
